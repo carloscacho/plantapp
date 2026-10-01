@@ -1,0 +1,542 @@
+﻿set. 25, 2026
+Reunião em 25 de set. de 2026 às 09:26 GMT-04:00 - Transcrição
+00:00:02
+
+
+Carlos Emilio de Andrade Cacho: Ah, F. Alô, alô, alô. Hum. Fala oi. E poarí eu tenho quear config da código o código não dá certo. libera mais fácil. a gente vê. ou ver. Ué. Oi, Sandra, tudo bem? Tá me ouvindo, Sandra? Vixe, não tava conseguindo falar. Tem que ativar o som, hein?
+sandra gressler: M.
+Carlos Emilio de Andrade Cacho: Oi. Legal. Não tô ouvindo você só se tiver falando. Tá. Oi. Agora tô vendo você e você saiu. Oi, mano. Não tô ouvindo ainda. Fala alguma coisa. Não tá a Да. Oi.
+Sandra Christina Gressler: Oi, Carlos.
+
+
+
+
+00:07:59
+
+
+Carlos Emilio de Andrade Cacho: Ah, oon, tudo bem?
+Sandra Christina Gressler: Car um pouquinho.
+Carlos Emilio de Andrade Cacho: Agora tô ouvindo.
+Sandra Christina Gressler: Sair daqui. Pronto, agora que acho que ficou bom agora, né?
+Carlos Emilio de Andrade Cacho: Ah, sim.
+Sandra Christina Gressler: É,
+Carlos Emilio de Andrade Cacho: Tô ouvindo agora.
+Sandra Christina Gressler: não, eu tava, meu computador tá com problema, não conseguia. Eh, mesmo que aqui tava aparecendo, tava aberto o som, provavelmente eu tinha que usar um microfone. Eu tô sem.
+Carlos Emilio de Andrade Cacho: Ah, tá. Não, tranquilo.
+Sandra Christina Gressler: Diga. Eu já vou abrir, já vou abrir o vídeo só um pouquinho. Pode falando.
+Carlos Emilio de Andrade Cacho: Ah, não, tudo bem. Eh, então, eh, vou fazer essa reunião, né, que é tipo, a gente chama de levantamento de requisitos, é para saber como que você quer fazer o aplicativo e tudo mais. Eu vou fazer meio certinho. Ah, é só umas questões assim, umas perguntas.
+
+
+
+
+00:08:48
+
+
+Carlos Emilio de Andrade Cacho: E aí eu tô fazendo esse aqui porque ele vai transcrever tudo para mim. E depois eu vou anotar lá, fazer tudo certinho. Tá bom.
+Sandra Christina Gressler: Tá, tá bom.
+Carlos Emilio de Andrade Cacho: Deixa eu aqui.
+Sandra Christina Gressler: as modernidades, né?
+Carlos Emilio de Andrade Cacho: É, eh, assim, é uma, a primeira pergunta é tipo, qual o objetivo do aplicativo, assim, qual que é o objetivo dele?
+Sandra Christina Gressler: O aplicativo, o objetivo é facilitar eh encontrar plantas específicas no campo.
+Carlos Emilio de Andrade Cacho: Tá.
+Sandra Christina Gressler: Então, além de facilitar encontrar plantas específicas, facilitar e a informação se aquelas plantas específicas, né, estão no campus.
+Carlos Emilio de Andrade Cacho: Ah, tá. Eh, beleza. Pera aí só deixa eu próximo aqui. Aí o público que vai que você visa, tipo, é público em geral ou você quer filtrar só para estudante, só
+Sandra Christina Gressler: Não são todas as pessoas, eh, por exemplo, que estiverem no campus, só as pessoas que tiverem dentro do campus, por causa que como a gente tem ideia de ter um um localizador, eh, para quem tiver dentro do campus,
+
+
+
+
+00:10:15
+
+
+Carlos Emilio de Andrade Cacho: Ah,
+Sandra Christina Gressler: então pode ser terceirizados,
+Carlos Emilio de Andrade Cacho: tá.
+Sandra Christina Gressler: podem ser servidores, podem ser eh estudantes, tá? Então, público eh tem um termo certinho que eu já usei em um trabalho, depois eu vejo.
+Carlos Emilio de Andrade Cacho: Tá? Eh, tá. O sistema utilizado no local específico que é o campus, né?
+Sandra Christina Gressler: Uhum.
+Carlos Emilio de Andrade Cacho: Eh, então ele vai funcionar somente lá no campus, né?
+Sandra Christina Gressler: Isso.
+Carlos Emilio de Andrade Cacho: Tá?
+Sandra Christina Gressler: A a pessoa, por exemplo,
+Carlos Emilio de Andrade Cacho: Eh,
+Sandra Christina Gressler: poderia seressar fora do campus, mas não não tem muito sentido,
+Carlos Emilio de Andrade Cacho: não tem
+Sandra Christina Gressler: porque ele vai ter uma relação de plantas e suas características. Mas a ideia ideal,
+Carlos Emilio de Andrade Cacho: sim.
+Sandra Christina Gressler: a ideia principal é que eh você possa fazer buscas e encontrar aquela determinada planta.
+Carlos Emilio de Andrade Cacho: Tá. Eh, então a finalidade do aplicativo apenas informativa, informativa educacional, principalmente educativa,
+
+
+
+
+00:11:23
+
+
+Sandra Christina Gressler: Isso, isso.
+Carlos Emilio de Andrade Cacho: informativa educação, tá? Quais informações deverão ser cadastradas para cada espécie aqui que é uma mais importante,
+Sandra Christina Gressler: É, eu tenho uma planilha,
+Carlos Emilio de Andrade Cacho: tipo cada planta.
+Sandra Christina Gressler: é, eu tenho uma planilha no Excel que a gente começou a fazer bem simples,
+Carlos Emilio de Andrade Cacho: Ah.
+Sandra Christina Gressler: só que eu quero ampliar ela, que é para isso que eu tô trabalhando agora à noite. Eh, eu tô ampliando essa planilha. Então, eu vou te mandar as plantas, o nome das plantas e todas as características que tem que ter, todas as informações sobre aquela planta que tem que ter.
+Carlos Emilio de Andrade Cacho: Так. Tá, mas assim, eh, então, tipo assim, vai ter nome, nome científico, família, origem, característica, todas coisas de planta, né?
+Sandra Christina Gressler: Isso aqui,
+Carlos Emilio de Andrade Cacho: E a localização.
+Sandra Christina Gressler: tipo de reprodução, porte, tipo de crescimento, partes da folha,
+Carlos Emilio de Andrade Cacho: Hum.
+Sandra Christina Gressler: clima, origem.
+
+
+
+
+00:12:21
+
+
+Sandra Christina Gressler: Basicamente são esses.
+Carlos Emilio de Andrade Cacho: Tá. Eh, daí essas informações precisam ser cadastradas. Eh, tipo assim, mesmo estando no no Excel, acho que seria melhor, mais fácil. Você tem estagiar, tem aluno, né, que vai participar do projeto,
+Sandra Christina Gressler: Tem,
+Carlos Emilio de Andrade Cacho: né?
+Sandra Christina Gressler: tem.
+Carlos Emilio de Andrade Cacho: Então seria eles irem até a a planta lá e fazer o cadastro dela e aí gerar o Qcode para para aquela planta, entendeu?
+Sandra Christina Gressler: Então, eh, o que eu pensei em fazer era a gente fazer esse cadastro e gerar o QRcode. A partir do QRCode, a gente vai nessa planta e coloca as estacas ou os tags na planta,
+Carlos Emilio de Andrade Cacho: Sim. Não é isso.
+Sandra Christina Gressler: tá?
+Carlos Emilio de Andrade Cacho: M.
+Sandra Christina Gressler: É isso mesmo. É você. E daí como como o localizador da outra vez deu muito errado, quando eu comecei a fazer o projeto, que o Daniel foi me ajudar, o localizador a gente usava como se fosse um localizador no Google mesmo,
+
+
+
+
+00:13:29
+
+
+Carlos Emilio de Andrade Cacho: Ага.
+Sandra Christina Gressler: mas eh tem muitas plantas, por exemplo, que morrem ou a gente troca de lugar. Aí, como se realimenta esse esse site com essas modificações. Então, a minha ideia é a gente dividir em três grandes áreas ou quatro grandes áreas. Por exemplo, campo, que é aquela parte externa, o pomar, o campo agroológico, eh a horta, o pátio e o viveiro das ornamentais. Então, dividir essas plantas que elas estão realmente divididas nesses grandes grupos. que é um indicativo do lugar.
+Carlos Emilio de Andrade Cacho: Ага.
+Sandra Christina Gressler: Então, a pessoa ela não vai chegar na planta, ela vai chegar onde essa planta tá encontrada, tipo assim, em qual grande lugar. Aí depois na no tag,
+Carlos Emilio de Andrade Cacho: Ah.
+Sandra Christina Gressler: além do Qcode, vai ter o nome popular ou nome científico. Então, a pessoa vai ter que procurar eh sem o auxílio do da da internet. Não sei ainda como fazer do Pomar. Poderia até ter o localizador na do Google, né?
+
+
+
+
+00:14:33
+
+
+Sandra Christina Gressler: Porque são plantas perenes,
+Carlos Emilio de Andrade Cacho: Aha.
+Sandra Christina Gressler: mas por na horta a alface vai mudar de lugar. Então a gente faz uma uma estaca, toda vez que tiver um canteiro de alface,
+Carlos Emilio de Andrade Cacho: Угуm.
+Sandra Christina Gressler: o Luiz pode colocar aquela estaca em frente. ornamentais, as que são fixas, né, que são perenes, a gente pode colocar e o localizador do Google, mas aquelas que, por exemplo, que duram Yeah. que tão num vaso que de repente ela vai para um canto, vai pro outro, transplanta. Aí a gente pode falar: "Ele tá nesse lugar, mas procure uma tag que tá escrito isso, né?" Então, enfim, porque a gente não consegue ficar retroalimentando esses esses detalhes, eu acho, né?
+Carlos Emilio de Andrade Cacho: Ah, não dá assim. Só que daí é um trabalho extra, né? Tipo,
+Sandra Christina Gressler: Fica ret,
+Carlos Emilio de Andrade Cacho: mas dá sim para editar e modificar.
+Sandra Christina Gressler: fica retroalimentando. É, eu acho que não.
+
+
+
+
+00:15:29
+
+
+Carlos Emilio de Andrade Cacho: Dá, não é possível. Sim. Eh, deixa eu fazer outra aqui. Vai ser necessário ter as fotos das plantas,
+Sandra Christina Gressler: Se possível.
+Carlos Emilio de Andrade Cacho: tá? Eh, então, mas assim, vai ser foto específica da planta ou você prefere que seja tipo assim da espécie da do tipo da árvore?
+Sandra Christina Gressler: É uma foto da internet. uma foto da internet, eu acho.
+Carlos Emilio de Andrade Cacho: tá colocar aqui isso aqui. Depois a gente vê, né, sobre essas características tem a planilha, né?
+Sandra Christina Gressler: Tô terminando ela.
+Carlos Emilio de Andrade Cacho: Eh,
+Sandra Christina Gressler: Tô terminando ela. Tô falta tentando completar o resto dos dados.
+Carlos Emilio de Andrade Cacho: então sobre as alterações aí que você falou, será que a gente consegue fazer sem problema nenhum, tal?
+Sandra Christina Gressler: อ
+Carlos Emilio de Andrade Cacho: Eh, mas seria necessário salvar um histórico de alterações, tal, do que foi feito, tipo assim, tem a ficada assim. Qual que é a ideia?
+
+
+
+
+00:16:49
+
+
+Carlos Emilio de Andrade Cacho: Tipo assim, é ter esse banco de dados offline no próprio celular da pessoa, sabe? Dá pra gente fazer isso. A gente faz o app e tal, aí a pessoa online, ela baixa as informações, né?
+Sandra Christina Gressler: Ага.
+Carlos Emilio de Andrade Cacho: E daí ela inicia o aplicativo e aí o aplicativo carrega as informações baixando baixando no servidor, né, quando ela tá online. E aí quando ela tá offline ela pode ir na localização, tal e e usar o sistema offline.
+Sandra Christina Gressler: Pode usar, pode usar ainda, pode usar as informações mesmo offline, né?
+Carlos Emilio de Andrade Cacho: É,
+Sandra Christina Gressler: Mas daí tem como fazer uma forma de não ocupar muito espaço?
+Carlos Emilio de Andrade Cacho: sim. Então,
+Sandra Christina Gressler: Ah,
+Carlos Emilio de Andrade Cacho: a questão da,
+Sandra Christina Gressler: tá.
+Carlos Emilio de Andrade Cacho: tipo assim, se for só informações de texto, tal, é, mais, eh, não ocupa tanto espaço. Agora, a questão de de imagens já ocupa um pouquinho mais de espaço, né?
+
+
+
+
+00:17:42
+
+
+Sandra Christina Gressler: Então, o que a gente podia fazer era tentar deixar sem a imagem, porque a maioria dos alunos eles não têm muita memória no celular deles, né?
+Carlos Emilio de Andrade Cacho: Uhum. Se for somente as informações das PL, Tantas, tal. É, é pouquíssimo, pouquíssimos dados.
+Sandra Christina Gressler: Tá, vamos tentar fazer a princípio sem as fotos e não tem como fazer assim com as fotos apenas online.
+Carlos Emilio de Andrade Cacho: Tá, não dá assim, então.
+Sandra Christina Gressler: Então podemos fazer assim também. Então seria sem as fotos e se tiver online você tem acesso às
+Carlos Emilio de Andrade Cacho: Beleza.
+Sandra Christina Gressler: fotos.
+Carlos Emilio de Andrade Cacho: E beleza.
+Sandra Christina Gressler: Beleza?
+Carlos Emilio de Andrade Cacho: Tá. Eh, quais características? Aqui vou depois ver daí da localização. Eh, a ideia é ter o mapa, né? Mas você falou em dividir em grandes áreas, né?
+Sandra Christina Gressler: é o o usar ou o localizador do Google
+
+
+
+
+00:18:45
+
+
+Carlos Emilio de Andrade Cacho: Aham.
+Sandra Christina Gressler: ou, por exemplo, indicar em grandes áreas. Então, se a pessoa tá fora, eh, tá offline, ela pelo menos sabe em que grande área que tá, né?
+Carlos Emilio de Andrade Cacho: É, então hoje em dia já era, não sei quando que o Daniel fez isso para você que agora
+Sandra Christina Gressler: Eu eu te mandei o projetinho lá, mais ou menos do que que era. Ele não ele não fez, ele era só a ideia.
+Carlos Emilio de Andrade Cacho: Ah, tá. Não é que antigamente o o mapa do Google não baixava,
+Sandra Christina Gressler: Eu
+Carlos Emilio de Andrade Cacho: né? Mas agora eles baixam o mapa, tal. É possível baixar aí, não é? Não ocupa tanto espaço.
+Sandra Christina Gressler: não não pensei em baixar o mapa, pensei só que nem um GPS assim, só você te dar o
+Carlos Emilio de Andrade Cacho: Então, mas daí, mas daí tem que ter o mapinha baixado para pro GPS funcionar.
+
+
+
+
+00:19:34
+
+
+Sandra Christina Gressler: Ah, entendi, entendi, entendi,
+Carlos Emilio de Andrade Cacho: Aí o GPS também funciona off.
+Sandra Christina Gressler: entendi.
+Carlos Emilio de Andrade Cacho: Aí a localização é GPS dispositivo, né?
+Sandra Christina Gressler: A localização seria o GPS e a tag, né? Por causa que tem plantas muito próximas, né? O GPS não tem essa precisão, né? Então daí a gente coloca o GPS e a tag,
+Carlos Emilio de Andrade Cacho: Tá.
+Sandra Christina Gressler: né? Então ele vai chegar perto e vai botar tag para ler,
+Carlos Emilio de Andrade Cacho: Sim.
+Sandra Christina Gressler: para confirmar.
+Carlos Emilio de Andrade Cacho: É,
+Sandra Christina Gressler: Não sei por causa que se ele já tá procurando, ele já tá naquela planta. Aí ele chegou naquele lugar,
+Carlos Emilio de Andrade Cacho: não entendo.
+Sandra Christina Gressler: aí para confirmar vai ter a tag com o nome e o Qcode, né? Então você pode acessar tanto procurando quanto através do QRCode, né?
+Carlos Emilio de Andrade Cacho: Mhm.
+Sandra Christina Gressler: A minha questão mais, Carlos, era assim: Eh, a forma de acesso à informação ser de diferentes palavraschave.
+
+
+
+
+00:20:34
+
+
+Sandra Christina Gressler: Então, eu posso colocar nome popular, eu posso colocar o nome científico, eu posso colocar, por exemplo, a localização ou tirar foto do Qcode que vai me dar acesso às informações. posso colocar um tipo de influorescência.
+Carlos Emilio de Andrade Cacho: S.
+Sandra Christina Gressler: Aí o aplicativo teria que aparecer uma relação, por exemplo, das plantas no campus que tem aquele mesmo tipo de influorescência. Então, a ideia é que através de uma palavrachave digitada,
+Carlos Emilio de Andrade Cacho: Uhum.
+Sandra Christina Gressler: eu tenho acesso a uma série de informações até que eu consiga, por exemplo, ir selecionando e chegar em uma planta exclusiva ou única, né?
+Carlos Emilio de Andrade Cacho: Ah,
+Sandra Christina Gressler: Então,
+Carlos Emilio de Andrade Cacho: sim.
+Sandra Christina Gressler: vamos dizer que você achou uma planta que tem uma raiz diferente. Deixa eu, deixa eu achar os nomes técnicos aqui que também eu nem eu. Vamos dizer que nós temos um caule com gemas auxiliares ou um caule cul cafolia, caule aéreo, enfim, o caule com gemas auxiliares. Eu coloco caule, gemas auxiliares, que é uma palavra que tá lá, né?
+
+
+
+
+00:21:49
+
+
+Sandra Christina Gressler: Ou gemas auxiliares. E através dessa palavra ele vai te dar a relação das plantas que vão aparecer, que que apareçam essa palavra.
+Carlos Emilio de Andrade Cacho: Mhm.
+Sandra Christina Gressler: Então eu tenho uma relação de cinco plantas que tem Cul, eh, que que eu falei? Auxiliar. A partir dessas cinco, cinco plantas que aparece uma lista, eu vou escolher uma delas ou clico numa. Aí ele vai me dar o restante das informações, o nome como o nome científico, onde ela tá, eh, qual o porte, clima. Então, a partir dali, eu posso acessar outras informações daquela planta,
+Carlos Emilio de Andrade Cacho: Ah, sim. Então, era a próxima pergunta que eu ia fazer.
+Sandra Christina Gressler: tá? Desculpa.
+Carlos Emilio de Andrade Cacho: Não, mas tá, já respondeu, né? Aí tá s respondido aqui, ó. Aqui, ó. Por quais informações usuário deverá pesquisar ou filtrar as árvores?
+Sandra Christina Gressler: Então,
+Carlos Emilio de Andrade Cacho: Aí ele já tá respondido.
+
+
+
+
+00:22:46
+
+
+Sandra Christina Gressler: com todas as com todas as palavras que vão estar nessa planilha que eu vou te dar, então, ele pode começar com nome científico, com nome comum, eh,
+Carlos Emilio de Andrade Cacho: Tá,
+Sandra Christina Gressler: e se ele tiver curiosidade de uma planta em específico, ele pode ler o Qcode que vai levar ela direto para aquela planta, né?
+Carlos Emilio de Andrade Cacho: sim. Eh, a gente tem uma separação também sobre pesquisa e filtro, tá? Eh,
+Sandra Christina Gressler: Так.
+Carlos Emilio de Andrade Cacho: tipo assim, eh, se eu pesquisasse qualquer palavra, aí ele pode acabar misturando. Tipo assim, por exemplo, eu queria só pesquisar a família, a família de plantas, tal,
+Sandra Christina Gressler: Угу.
+Carlos Emilio de Andrade Cacho: aí é um filtro, aí eu filtro sobre essa família de plantas, entendeu? Se eu pesquisar, se eu fazer uma pesquisa, pode aparecer outras plantas que não são da família, eh, misturadas, entendeu? Daí, tipo, eu tô pesquisando uma família de plantas e aí aparece outras plantas que não são da mesma família se eu fosse só em pesquisa,
+
+
+
+
+00:23:47
+
+
+Sandra Christina Gressler: Mas mas a pesquisa seria
+Carlos Emilio de Andrade Cacho: entendeu? Então,
+Sandra Christina Gressler: por causa, por exemplo, eh, vamos dizer assim, Yeah. Porque algumas palavras têm similaridade.
+Carlos Emilio de Andrade Cacho: Eh,
+Sandra Christina Gressler: Por exemplo, se eu colocasse Silva, tem várias pessoas que t a a não, por exemplo, Sandra, tem quem é Alessandra vai aparecer. É isso ou não?
+Carlos Emilio de Andrade Cacho: isso é mais ou menos isso.
+Sandra Christina Gressler: Explica melhor que eu não entendo.
+Carlos Emilio de Andrade Cacho: É, é tipo assim, fala uma uma família de uma planta aí. Vamos ver
+Sandra Christina Gressler: Ave Maria. Eh,
+Carlos Emilio de Andrade Cacho: qualquer musa.
+Sandra Christina Gressler: musa.
+Carlos Emilio de Andrade Cacho: Aí eu pesquiso musa. Aí vai aparecer todas as as a tipo assim na pesquisa, né? Se fosse uma pesquisa, se eu fosse só pesquisar e escrever isso musa,
+Sandra Christina Gressler: Aham.
+Carlos Emilio de Andrade Cacho: aí ia aparecer todas as plantas dessa família musa.
+
+
+
+
+00:24:47
+
+
+Sandra Christina Gressler: Uhum.
+Carlos Emilio de Andrade Cacho: E todas as plantas com nome que começa com musa ou que tem no meio musa,
+Sandra Christina Gressler: É,
+Carlos Emilio de Andrade Cacho: entendeu?
+Sandra Christina Gressler: entendi. Entendi. Não, isso não serve, né? Tem que ser filtro,
+Carlos Emilio de Andrade Cacho: É,
+Sandra Christina Gressler: né? Tem que ser filtro.
+Carlos Emilio de Andrade Cacho: então tem tem essas duas características, mas eu posso aí a gente pode aplicar essas duas, entendeu? tanto filtro como pesquisa, mas aí vai dá para fazer as duas sem
+Sandra Christina Gressler: Eu eu acho que eu acho que o filtro é melhor,
+Carlos Emilio de Andrade Cacho: problema.
+Sandra Christina Gressler: né?
+Carlos Emilio de Andrade Cacho: É, em alguns casos, se eu for procurar a o nome da planta, aí eu posso ir direto com uma pesquisa, né?
+Sandra Christina Gressler: No filtro você fala.
+Carlos Emilio de Andrade Cacho: Eh, não, eu vou fazer os dois, fica tranquilo.
+Sandra Christina Gressler: Tá,
+Carlos Emilio de Andrade Cacho: Só tô diz,
+Sandra Christina Gressler: tá,
+
+
+
+
+00:25:30
+
+
+Carlos Emilio de Andrade Cacho: só tô falando que pode acontecer isso, entendeu?
+Sandra Christina Gressler: entendi, entendi.
+Carlos Emilio de Andrade Cacho: Eh, é necessário pr essa distância entre o usuário e determinada árvore
+Sandra Christina Gressler: Ah,
+Carlos Emilio de Andrade Cacho: e você falou.
+Sandra Christina Gressler: eu acho que não. Eu acho que não. Por exemplo, eu posso pesquisar da sala de aula e posso ter as informações só para consultar na sala de
+Carlos Emilio de Andrade Cacho: Aham.
+Sandra Christina Gressler: aula e quando eu,
+Carlos Emilio de Andrade Cacho: Ah, sim.
+Sandra Christina Gressler: por exemplo, for ler o Qcode, aí sim, aí eu tenho que estar próximo, né? Porque eu daí eu vou ter quear ler com o meu celular, né? Então daí isso, então eu tenho a chance de pesquisar as informações da sala, mas eu posso chegar próximo à planta e e, né? Mas daí eu tenho que ler com QR Code.
+Carlos Emilio de Andrade Cacho: Aham.
+Sandra Christina Gressler: Eu pensei assim,
+Carlos Emilio de Andrade Cacho: Beleza.
+Sandra Christina Gressler: ou se eu pesquisar da sala, por exemplo, e me dar localização, aí através do localizador, ele vai me direcionando até chegar perto da planta, né?
+
+
+
+
+00:26:27
+
+
+Carlos Emilio de Andrade Cacho: Uhum.
+Sandra Christina Gressler: E é só isso só para as plantas que estão dentro do campus. Por enquanto, né? De repente um dia nós fazemos para todas as plantas em ponta, mas por enquanto só para as plantas que estão dentro do campus. E já deu uma lista aqui que eu tô que eu já fiz, já repassei assim por cima. 135 plantas.
+Carlos Emilio de Andrade Cacho: Nossa,
+Sandra Christina Gressler: É, 135 plantas com, deixa eu ver quantas car quantas eh
+Carlos Emilio de Andrade Cacho: F.
+Sandra Christina Gressler: eh Kom. Hum. Ah, já passou, já passou do alfabeto inteiro de colunas.
+Carlos Emilio de Andrade Cacho: Nossa, é muito não.
+Sandra Christina Gressler: É muita informação, né? É que eu comecei a ser mais um pouco mais eh técnica. Primeiro a gente só tinha cinco informações bem básicas, mas eu acho que tem mais interesse ali para mim como professora, porque tem informações que nem eu não vou saber falar se eu não tiver algum aplicativo para me ajudar, né?
+
+
+
+
+00:27:28
+
+
+Sandra Christina Gressler: Então, eh,
+Carlos Emilio de Andrade Cacho: Entendi.
+Sandra Christina Gressler: alguns detalhes muito específicos da planta, se a gente tem essa informação correta, ajuda tanto para mim quanto pros alunos, né?
+Carlos Emilio de Andrade Cacho: Sim. Tá. Eu tenho que ver essas da planilha aí para entender também esse. Tá. Ã, então o sistema vai gerar os Q codes, né? Então, tipo, a gente, como você falou que você tem essa planilha e ela tá separadinha, eu acho que dá para para essas informações dá para eu pré-carregar,
+Sandra Christina Gressler: Tá
+Carlos Emilio de Andrade Cacho: só que a localização da planta vai ser eh tem que ser adicionada depois. Então a pessoa, tipo assim,
+Sandra Christina Gressler: isso,
+Carlos Emilio de Andrade Cacho: o qual que é mais fácil adicionar uma localização? É a pessoa aí no local,
+Sandra Christina Gressler: isso.
+Carlos Emilio de Andrade Cacho: entendeu?
+Sandra Christina Gressler: Isso. Depois, depois a gente faz isso. Se você, não sei se pode, tipo assim, ser numa outra etapa, a localização, a gente faz primeiro essa planilha de busca com essas informações e depois a gente faz essa e depois tem que
+
+
+
+
+00:28:25
+
+
+Carlos Emilio de Andrade Cacho: Tá.
+Sandra Christina Gressler: gerar os Qcodes também dessas 130 plantas, né?
+Carlos Emilio de Andrade Cacho: Sim.
+Sandra Christina Gressler: Aí a gente depois eu peço quem que faz a impressão 3D que desce para fazer Qode com leitura boa na 3D faz.
+Carlos Emilio de Andrade Cacho: Ah, não, mas é é muito demorado, né? São 135.
+Sandra Christina Gressler: É, mas os QCOD pequenininho, né?
+Carlos Emilio de Andrade Cacho: É ali no no FMER a gente faria
+Sandra Christina Gressler: Ou se não ou sen não em acrílico.
+Carlos Emilio de Andrade Cacho: acrílico. Não, não pega porque tem que ter a coloração,
+Sandra Christina Gressler: Pega.
+Carlos Emilio de Andrade Cacho: né? branco e preto.
+Sandra Christina Gressler: Então, mas se você faz o relevo no acrílico e a gente pinta por baixo e e faz elas colado, dois acrílicos e pinta o interior dela, não, às vezes dá dá errado, né?
+Carlos Emilio de Andrade Cacho: Mas é é muito quadradinho,
+Sandra Christina Gressler: Não consegue pintar bem certinho.
+Carlos Emilio de Andrade Cacho: né?
+
+
+
+
+00:29:22
+
+
+Carlos Emilio de Andrade Cacho: É um pouquinho difícil, mas assim e dá para fazer impressão no 3D,
+Sandra Christina Gressler: É. Tá. Depois a gente
+Carlos Emilio de Andrade Cacho: eu acho que é mais fácil. Aquelas impressoras novas lá no no IF Maker, ela ela faz impressão de duas cores, tal.
+Sandra Christina Gressler: legal, mas depois a gente pensa nisso. Eh, o sabe o que que eu pensei, Carlos? Eu ainda tô terminando de alimentar essa planilha porque são muitas informações, muitas plantas. Eu posso te mandar,
+Carlos Emilio de Andrade Cacho: Aha.
+Sandra Christina Gressler: por exemplo, duas espécies que já estão prontas, vamos dizer que é soja e milho, que são as mais estudadas. E com essas duas você montar todo o essa dinâmica e depois eu te dar mandar o resto só para não te não te segurar muito.
+Carlos Emilio de Andrade Cacho: Não é tipo assim, eu vou montar primeiro sem, aí depois eu vou carregar. Aí eu carrego, mas aí eu posso carregar total já tem problema não.
+
+
+
+
+00:30:14
+
+
+Sandra Christina Gressler: Tá, tá bom. Mas eu vou tentar fazer pelo menos da soja e do milho para você ver a extensão que é a planilha e depois eu te mando ela completinha,
+Carlos Emilio de Andrade Cacho: Tá OK.
+Sandra Christina Gressler: porque as ornamentais tem muita coisa que eu tenho que estar procurando muito que não tem, não aparece quase nada, né? Então tem muitas ornamentais que eu tenho que correr atrás.
+Carlos Emilio de Andrade Cacho: Tá bom. Vamos ver aqui, ó. Eh, será necessário gerar e baixar os carportos de uma vez, tá? Você quer tá? Vamos ver aqui, ó. Daí uma ideia, você nesse projeto tem um alunos envolvidos, né?
+Sandra Christina Gressler: Bem, eu tenho uma estagiária e tenho alunos da graduação que poderiam ajudar também.
+Carlos Emilio de Andrade Cacho: Então daí criar uma área administrativa para eh depois que alimentar, né, esses pré-dados eles eles finalizarem e mexerem para gerenciar esses dados. Então teria essa área administrativa,
+
+
+
+
+00:31:26
+
+
+Sandra Christina Gressler: Sim,
+Carlos Emilio de Andrade Cacho: né?
+Sandra Christina Gressler: sim.
+Carlos Emilio de Andrade Cacho: Deixa eu ver aqui.
+Sandra Christina Gressler: você falou quem teria acesso. Eh, se é um aplicativo que você faz download, então acaba sendo mais pessoas, não só que estão no campus, né? Mas também não tem problema que não tem não,
+Carlos Emilio de Andrade Cacho: Ah.
+Sandra Christina Gressler: tipo assim, só tem um nome de planta e classificação. Então não tem problema que qualquer um com o aplicativo consiga acessar os dados, sabe? Não tem nada de
+Carlos Emilio de Andrade Cacho: Uhum. Tá. Deixa eu ver aqui. Esse aqui acho que é pergunta para mim aqui se o administrador que que ele pode fazer. Ah, tá. Eh, só um minutinho, tá? E aí a ideia é funcionar nos celulares, né? Mas você Android,
+Sandra Christina Gressler: É só só nos celulares.
+
+
+
+
+00:32:47
+
+
+Carlos Emilio de Andrade Cacho: iOS, né?
+Sandra Christina Gressler: Uhum.
+Carlos Emilio de Andrade Cacho: eh, É, o usuário pode comunicar problemas encontrado nas árvores,
+Sandra Christina Gressler: pode ou eh inconsistências nas informações. Pode.
+Carlos Emilio de Andrade Cacho: tá?
+Sandra Christina Gressler: Se um dia, por exemplo, alguém encontrar algum erro cadastrado em alguma determinada planta, eu acho que pode comunicar sim, né? Isso ajuda também.
+Carlos Emilio de Andrade Cacho: Mhm. Tá.
+Sandra Christina Gressler: a questão da foto, você vê se você acha que vai ficar muito pesado ou não. E outra coisa também, por exemplo, o usuário consegue obter essas informações. Se eu quero ver por de uma planta só, eu obter essas informações eh em forma de texto,
+Carlos Emilio de Andrade Cacho: Sim. Ah, tá. Tipo baixar as informações da planta,
+Sandra Christina Gressler: tipo assim, tipo é tipo gerar um PDF sobre aquela planta,
+Carlos Emilio de Andrade Cacho: tá?
+Sandra Christina Gressler: tá?
+Carlos Emilio de Andrade Cacho: Vou cá aqui.
+Sandra Christina Gressler: Eu acho que é interessante, né?
+
+
+
+
+00:34:08
+
+
+Sandra Christina Gressler: Então eu chego lá numa planta, eu gero um PDF, eu tenho todas as informações em forma de texto, né? Não em forma de planilha,
+Carlos Emilio de Andrade Cacho: Uhum.
+Sandra Christina Gressler: né? E esses textos podem já podem ser pré pré feitos e só inseridos no no programa ou ele cria na hora a inteligência artificial cria na hora.
+Carlos Emilio de Andrade Cacho: Não. Então aí não os textos a
+Sandra Christina Gressler: É.
+Carlos Emilio de Andrade Cacho: gente tem que cadastrar,
+Sandra Christina Gressler: Tá. Não,
+Carlos Emilio de Andrade Cacho: eh,
+Sandra Christina Gressler: tá bom. Entendi.
+Carlos Emilio de Andrade Cacho: porque se pedir para ir a gerar aí, ela pode gerar alucinação ali no meio, né? E a gente não tem controle,
+Sandra Christina Gressler: Tá, tá,
+Carlos Emilio de Andrade Cacho: né? E aí eu não,
+Sandra Christina Gressler: tá.
+Carlos Emilio de Andrade Cacho: tipo,
+Sandra Christina Gressler: Então eu é,
+Carlos Emilio de Andrade Cacho: não vou saber corrigir.
+Sandra Christina Gressler: eu vou eu vou eu vou fazer mais uma coluna aqui, então, com texto, que na verdade eh em vez da das informações tá em planilha, né, ela vai tá num texto só,
+
+
+
+
+00:35:04
+
+
+Carlos Emilio de Andrade Cacho: Aham.
+Sandra Christina Gressler: né?
+Carlos Emilio de Andrade Cacho: Sim.
+Sandra Christina Gressler: Eu eu falo.
+Carlos Emilio de Andrade Cacho: Não, mas é é obtenção, tipo, eu vou obter esses dados da planilha, né? Aí eu só vou a gente vai imprimir num num PDF, essas informações que já estão aí, né?
+Sandra Christina Gressler: Isso. Perfeito.
+Carlos Emilio de Andrade Cacho: Beleza? Então é isso,
+Sandra Christina Gressler: Beleza.
+Carlos Emilio de Andrade Cacho: Sandra.
+Sandra Christina Gressler: Beleza. Ó,
+Carlos Emilio de Andrade Cacho: Vou
+Sandra Christina Gressler: eh, eu tô tentando eh finalizar, então, algumas já estão prontas, mas tenha muitas que eu tô procurando.
+Carlos Emilio de Andrade Cacho: certo.
+Sandra Christina Gressler: Todas essas características são muitas vezes informações difíceis de achar, mesmo na internet, mesmo com livro. Então eu posso demorar um tempo, se você precisar pelo menos do esqueleto básico, das que já tem pronta aí e você acha que facilita, eu já posso ir te mandando pelo menos um uma gama de de informações até
+Carlos Emilio de Andrade Cacho: Acho, acho que Yeah.
+
+
+
+
+00:35:58
+
+
+Carlos Emilio de Andrade Cacho: preciso eh essa planilha que você falou que tinha já já poderia mandar ela só para eu saber o que que tem que cadastrar,
+Sandra Christina Gressler: Eh,
+Carlos Emilio de Andrade Cacho: né? Porque eu preciso criar o banco de dados baseado na quantidade de informações que você quer cadastrar
+Sandra Christina Gressler: eh,
+Carlos Emilio de Andrade Cacho: lá,
+Sandra Christina Gressler: perfeito. Então, até segunda eu te mando ela. Eu vou repassar ela aqui. Até segunda eu te mando. Pode ser?
+Carlos Emilio de Andrade Cacho: tá? OK.
+Sandra Christina Gressler: Não,
+Carlos Emilio de Andrade Cacho: Tá? Então é isso,
+Sandra Christina Gressler: mais tudo certo.
+Carlos Emilio de Andrade Cacho: tudo certo. Era isso,
+Sandra Christina Gressler: Então tá bom.
+Carlos Emilio de Andrade Cacho: era só pra gente entender aqui.
+Sandra Christina Gressler: Então tá bom. Então tá bom.
+Carlos Emilio de Andrade Cacho: Tá bom, Sandra?
+Sandra Christina Gressler: Obrigado.
+Carlos Emilio de Andrade Cacho: Obrigado.
+Sandra Christina Gressler: Obrigado, Carlos.
+Carlos Emilio de Andrade Cacho: Obrigado.
+Sandra Christina Gressler: Desculpa aí. Desculpa aí do horário. Perdi o horário.
+Carlos Emilio de Andrade Cacho: Tranquilo.
+Sandra Christina Gressler: Até mais.
+Carlos Emilio de Andrade Cacho: Até mais. Ah, tem que parar aqui. Так.
+
+
+
+
+A transcrição foi encerrada após 00:36:56
+
+
+Esta transcrição editável foi gerada por computador e pode conter erros. As pessoas também podem alterar o texto depois que ele for criado.

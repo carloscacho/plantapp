@@ -1,18 +1,28 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useColorScheme } from 'react-native';
+import { Stack } from 'expo-router';
+import { SQLiteProvider } from 'expo-sqlite';
+import { PaperProvider, MD3LightTheme } from 'react-native-paper';
+import { initializeDatabase } from '../database/init';
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
+const theme = {
+  ...MD3LightTheme,
+  colors: {
+    ...MD3LightTheme.colors,
+    primary: '#32A041',
+    secondaryContainer: '#e8f5e9',
+  },
+};
 
-SplashScreen.preventAutoHideAsync();
-
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+export default function RootLayout() {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
+    <PaperProvider theme={theme}>
+      <SQLiteProvider databaseName="plantas_v2.db" onInit={initializeDatabase}>
+        <Stack>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="plant/[id]" options={{ title: 'Ficha da Planta', headerStyle: { backgroundColor: '#32A041' }, headerTintColor: '#fff' }} />
+          <Stack.Screen name="admin/index" options={{ title: 'Painel Administrativo', headerStyle: { backgroundColor: '#32A041' }, headerTintColor: '#fff' }} />
+          <Stack.Screen name="+not-found" options={{ title: 'Não Encontrado' }} />
+        </Stack>
+      </SQLiteProvider>
+    </PaperProvider>
   );
 }

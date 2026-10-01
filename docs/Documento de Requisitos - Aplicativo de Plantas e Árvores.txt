@@ -1,0 +1,105 @@
+﻿Especificação de Requisitos de Software (ERS)
+Aplicativo de Catalogação e Identificação de Plantas do Campus
+1. Visão Geral do Projeto
+Este documento consolida o levantamento de requisitos para o desenvolvimento do aplicativo mobile de catalogação, localização e consulta educativa das espécies de plantas e árvores do campus.
+
+
+* Objetivo Principal: Facilitar a localização de plantas específicas no campo e prover informações técnicas e educativas detalhadas aos usuários.
+* Público-Alvo: Comunidade do campus, incluindo estudantes, professores, servidores, funcionários terceirizados e visitantes.
+* Escopo Geográfico: Restrito e otimizado para a área delimitada do campus.
+* Finalidade Predominante: Educativa e informativa.
+* Volume Inicial de Dados: Catalogação de aproximadamente 135 espécies de plantas mapeadas em planilha.
+2. Requisitos Funcionais (RF)
+RF01 - Consulta e Filtragem de Espécies
+* O aplicativo deve permitir a consulta e filtragem avançada de plantas por meio de múltiplos critérios técnicos.
+* Campos de Filtro: Nome popular, nome científico, família botânica, área física, tipo de reprodução, porte, tipo de crescimento, partes da folha e clima.
+* Mecanismo de Filtro: A busca deve atuar como um filtro estruturado por categoria ou palavra-chave exata para evitar a mistura com resultados irrelevantes.
+RF02 - Leitura de QR Code e Tags Físicas
+* O sistema deve permitir a leitura de QR Codes fixados em estacas ou tags físicas instaladas junto às plantas no campo.
+* Ao realizar a leitura do QR Code, o aplicativo deve direcionar o usuário imediatamente à tela com as informações da planta correspondente.
+RF03 - Mapeamento por Grandes Áreas do Campus
+* O sistema deve organizar a localização das plantas em grandes áreas delimitadas do campus.
+* Setores Identificados: Campo externo, pomar, campo agroecológico, horta, pátio e viveiro de ornamentais.
+* Esta divisão visa orientar o usuário até a área desejada, permitindo a localização final por meio do nome/tag física, contornando limitações em plantas que mudam de canteiro ou vasos.
+RF04 - Modo Offline e Armazenamento Local
+* O aplicativo deve funcionar de forma offline para consultas no campo ou em salas de aula sem conectividade.
+* O sistema deve armazenar os dados textuais das plantas localmente no dispositivo móvel.
+* Quando houver conexão à internet, o aplicativo deve sincronizar e atualizar a base local a partir do servidor.
+RF05 - Exibição de Imagens Sob Demanda
+* As fotos ilustrativas das espécies devem ser acessadas exclusivamente quando o dispositivo estiver online.
+* Esta abordagem reduz o uso do armazenamento interno dos celulares dos estudantes.
+RF06 - Exportação de Ficha Técnica em PDF
+* O aplicativo deve permitir a geração e o download de relatórios em PDF com a ficha técnica estruturada da planta consultada.
+RF07 - Comunicação de Erros e Inconsistências
+* O aplicativo deve oferecer funcionalidade para que os usuários reportem divergências nas informações cadastradas ou problemas identificados nas plantas.
+RF08 - Módulo Administrativo e Gestão de Cadastros
+* O sistema deve disponibilizar um painel administrativo para professores, estagiários e administradores.
+* Ações Administrativas:
+   * Importação e carga inicial de dados via planilha.
+   * Cadastro, edição e atualização de espécies e informações botânicas.
+   * Inserção e atualização da localização geográfica (GPS/Setor) das plantas.
+   * Geração e exportação de QR Codes para confecção das placas/tags.
+3. Requisitos Não Funcionais (RNF)
+RNF01 - Multiplataforma
+* O aplicativo deve ser compatível e funcional nos sistemas operacionais Android e iOS.
+RNF02 - Otimização de Espaço de Armazenamento
+* A base de dados offline local deve conter apenas registros de texto e dados estruturados leves, mantendo baixo consumo de memória no smartphone.
+RNF03 - Precisão Mista de Localização (GPS + QR Code)
+* Devido à proximidade física entre algumas plantas, a orientação no mapa será complementada pela leitura da tag/QR Code no local para confirmação exata da planta.
+RNF04 - Usabilidade da Interface
+* A interface do aplicativo deve ser intuitiva, priorizando o acesso rápido por filtros botânicos e o leitor de QR Code integrado.
+4. Resumo da Matriz de Requisitos
+Código
+	Descrição do Requisito
+	Tipo
+	Prioridade
+	RF01
+	Consulta e Filtros de Espécies
+	Funcional
+	Alta
+	RF02
+	Identificação via QR Code
+	Funcional
+	Alta
+	RF03
+	Mapeamento por Setores / Grandes Áreas
+	Funcional
+	Alta
+	RF04
+	Armazenamento e Consulta Offline
+	Funcional
+	Alta
+	RF05
+	Imagens Online Sob Demanda
+	Funcional
+	Média
+	RF06
+	Gerador de Relatório PDF da Planta
+	Funcional
+	Média
+	RF07
+	Canal de Reporte de Erros
+	Funcional
+	Baixa
+	RF08
+	Painel Administrativo de Gestão
+	Funcional
+	Alta
+	RNF01
+	Suporte Multiplataforma (Android e iOS)
+	Não Funcional
+	Alta
+	RNF02
+	Otimização de Memória Local
+	Não Funcional
+	Alta
+	RNF03
+	Localização Híbrida (GPS + Tag)
+	Não Funcional
+	Média
+	5. Dados de Registro e Homologação
+* Responsável pelo Levantamento: Carlos Emilio de Andrade Cacho
+* Demandante e Especialista Botânica: Sandra Christina Gressler
+* Data da Reunião de Requisitos: 25 de setembro de 2026
+* Aprovador Técnico do Projeto: Person
+* Data da Homologação: Date

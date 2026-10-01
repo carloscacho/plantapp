@@ -1,0 +1,61 @@
+﻿set. 25, 2026
+Reunião em 25 de set. de 2026 às 09:26 GMT-04:00
+Registros da reunião Transcrição 
+
+
+
+
+Resumo
+Reunião abordou requisitos para aplicativo do campus com foco educacional via organização de dados e códigos QR
+
+Objetivo e Dados do Aplicativo
+Planejamento inicial definiu o escopo educacional do aplicativo com dados técnicos de 135 plantas organizados em planilha.
+
+Estratégia de Localização e Offline
+Definiu-se a divisão do campus em áreas físicas com etiquetas e códigos QR, permitindo consultas textuais offline sem imagens locais.
+
+Funcionalidades e Painel Administrativo
+Acordou-se a integração de filtros de pesquisa, relatórios em PDF e painel administrativo para gerenciamento móvel no Android e iOS.
+
+
+
+
+Decisões
+Alinhada
+* Objetivo e público-alvo do aplicativo O aplicativo terá como objetivo principal facilitar a localização e o fornecimento de informações sobre plantas específicas no campus para pessoas presentes no local.
+* Finalidade educativa e escopo das informações A finalidade do aplicativo será estritamente informativa e educacional, utilizando dados cadastrados de uma planilha com diversas características botânicas.
+* Estratégia de localização por grandes áreas e tags O campus será dividido em grandes áreas e o sistema utilizará uma combinação de GPS do dispositivo e tags físicas com QR codes para a localização das plantas.
+* Restrição de fotos ao modo online O aplicativo funcionará sem o armazenamento local de fotos para economizar espaço, disponibilizando as imagens apenas quando o usuário estiver conectado à internet.
+* Implementação de recursos de busca e filtro O sistema contará com funcionalidades de pesquisa e filtros baseados em palavras-chave e características botânicas presentes na planilha de dados.
+* Geração de PDF e reporte de inconsistências O sistema permitirá aos usuários gerar documentos em formato PDF com as informações textuais de uma planta e comunicar inconsistências ou problemas encontrados.
+
+
+
+
+Próximas etapas
+* [Sandra Christina Gressler] Enviar Planilha: Enviar a planilha atualizada com as informações das plantas e suas características até a próxima segunda-feira.
+* [Sandra Christina Gressler] Adicionar Coluna: Adicionar uma coluna à planilha contendo os dados das plantas organizados em formato de texto.
+* [Carlos Emilio de Andrade Cacho] Criar Banco: Estruturar o banco de dados do sistema utilizando a planilha recebida como base.
+
+
+
+
+Detalhes
+* Objetivo e Público-Alvo do Aplicativo: Carlos Emilio de Andrade Cacho conduziu uma reunião de levantamento de requisitos com Sandra Christina Gressler para estruturar o desenvolvimento de um aplicativo voltado ao campus (00:00:02). O objetivo principal apontado por Sandra Christina Gressler é facilitar a localização de plantas específicas e verificar a presença delas no ambiente universitário, com finalidade eminentemente educativa e informativa. O público-alvo engloba todas as pessoas que se encontram no interior do campus, incluindo estudantes, servidores e trabalhadores terceirizados (00:08:48).
+* Informações e Cadastro das Plantas: Sandra Christina Gressler relatou que está ampliando uma planilha no Excel para organizar os dados das espécies, englobando nome, nome científico, família, origem, características, tipo de reprodução, porte, tipo de crescimento, partes da folha e clima (00:11:23). A execução do cadastro será realizada por estagiários e estudantes que irão até a planta, farão o registro e gerarão um código QR para aplicação de etiquetas físicas (00:12:21).
+* Estratégia de Localização e Divisão de Áreas: Sandra Christina Gressler apontou que ferramentas de localização baseadas em mapas convencionais falharam no passado devido à movimentação ou morte de plantas (00:12:21). Como solução, Sandra Christina Gressler propôs dividir o campus em grandes áreas físicas — especificamente campo externo, pomar, campo agroecológico, horta, pátio e viveiro de ornamentais —, complementadas por estacas e etiquetas com códigos QR e nomes, evitando a necessidade de constantes atualizações digitais (00:13:29). Carlos Emilio de Andrade Cacho ponderou que o sistema permite edições digitais, mas Sandra Christina Gressler manteve a preferência pela divisão em áreas para mitigar o trabalho manual de retroalimentação (00:14:33).
+* Armazenamento de Fotos e Funcionamento Offline: Visando contornar a limitação de memória nos celulares dos estudantes, Sandra Christina Gressler sugeriu que o aplicativo funcione sem imagens armazenadas localmente (00:15:29) (00:17:42). Carlos Emilio de Andrade Cacho detalhou que o banco de dados textual será baixado do servidor quando houver conexão com a internet, permitindo consultas offline, enquanto as fotografias ficarão disponíveis exclusivamente de forma online (00:16:49).
+* Recursos de Mapeamento e GPS: Carlos Emilio de Andrade Cacho discutiu a viabilidade de baixar mapas e utilizar o GPS do dispositivo em modo offline, ao passo que Sandra Christina Gressler enfatizou que o GPS atuará em conjunto com as etiquetas físicas para garantir precisão diante da proximidade entre diferentes plantas (00:18:45).
+* Funcionalidades de Pesquisa e Filtros por Palavras-Chave: Sandra Christina Gressler determinou que a recuperação de informações deve ocorrer por meio de múltiplas palavras-chave — como nome popular, nome científico, localização, código QR, tipo de inflorescência ou de caule —, exibindo uma lista de resultados para afunilar a busca até uma espécie única (00:19:34). Carlos Emilio de Andrade Cacho esclareceu a distinção técnica entre a pesquisa livre (que pode abranger termos correlatos variados) e o filtro estruturado (para categorias específicas como família de plantas), sendo acordado que ambas as funções serão integradas ao sistema (00:22:46).
+* Distância de Acesso e Escopo de Dados: Sandra Christina Gressler esclareceu que a proximidade física da árvore não é obrigatória para consultas gerais de informações realizadas a partir de uma sala de aula, sendo necessária apenas no local para a leitura do código QR (00:25:30). No escopo atual, Sandra Christina Gressler levantou uma listagem preliminar composta por 135 plantas com detalhadas colunas de dados técnicos (00:26:27).
+* Pré-Carregamento de Dados e Geração de Códigos QR: Carlos Emilio de Andrade Cacho explicou que as informações textuais da planilha serão pré-carregadas no aplicativo, enquanto as coordenadas de localização exata deverão ser cadastradas posteriormente in loco (00:27:28). Para a fabricação física dos códigos QR das 135 plantas, Sandra Christina Gressler sugeriu o uso de impressão tridimensional ou acrílico, e Carlos Emilio de Andrade Cacho indicou o aproveitamento das impressoras tridimensionais de duas cores disponíveis no laboratório IF Maker (00:28:25).
+* Envio de Amostras da Planilha: Para testar a dinâmica da ferramenta sem sobrecarregar o fluxo de trabalho, Sandra Christina Gressler propôs enviar inicialmente os dados de duas espécies de referência (soja e milho) e, posteriormente, a planilha consolidada (00:29:22) (00:35:04).
+* Área Administrativa e Permissões do Sistema: Carlos Emilio de Andrade Cacho sugeriu a criação de um painel administrativo no aplicativo para que estagiários e estudantes possam gerenciar e finalizar a inserção dos dados (00:30:14). O aplicativo terá suporte para dispositivos móveis com sistemas operacionais Android e iOS (00:31:26). Adicionalmente, estabeleceu-se que as pessoas usuárias poderão reportar problemas ou inconsistências cadastrais detectadas nas plantas (00:32:47).
+* Geração de Relatórios em PDF: Sandra Christina Gressler solicitou a inclusão de um recurso para que as pessoas usuárias possam gerar um relatório em formato PDF contendo as informações textuais de uma planta específica (00:32:47). Carlos Emilio de Andrade Cacho aceitou a demanda, ressaltando que os textos serão extraídos diretamente da planilha oficial e não gerados por inteligência artificial, prevenindo assim eventuais alucinações de dados (00:34:08).
+* Próximos Passos e Prazos: Sandra Christina Gressler comprometeu-se a enviar a planilha revisada com os dados das plantas até a próxima segunda-feira, viabilizando a estruturação inicial do banco de dados por Carlos Emilio de Andrade Cacho (00:35:04).
+
+
+
+
+Revise as anotações do Gemini para checar se estão corretas. Confira dicas e saiba como o Gemini faz anotações
+Como está a qualidade de destas observações? Responda a uma breve pesquisa para nos dar seu feedback, incluindo o quanto as observações foram úteis para o que você precisa.
