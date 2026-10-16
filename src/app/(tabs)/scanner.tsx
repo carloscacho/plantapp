@@ -32,10 +32,15 @@ export default function ScannerScreen() {
     setScanned(true);
     setIsScanning(false);
     
-    // O mockData possui qrCodeUrl no formato: "https://exemplo.com/qr/1"
-    // Extraimos os dígitos no final da URL
-    const match = data.match(/\/(\d+)$/);
-    const plantId = match ? match[1] : data;
+    // Suporta códigos diretos como "P001", "P025", números "1" -> "P001" ou URLs como "https://.../P001"
+    let plantId = data.trim();
+    const urlMatch = plantId.match(/(?:plant\/|qr\/)?(P\d+|\d+)\/?$/i);
+    if (urlMatch) {
+      const code = urlMatch[1].toUpperCase();
+      plantId = code.startsWith('P') ? code : `P${code.padStart(3, '0')}`;
+    } else if (/^\d+$/.test(plantId)) {
+      plantId = `P${plantId.padStart(3, '0')}`;
+    }
 
     router.push(`/plant/${plantId}`);
     
@@ -52,7 +57,7 @@ export default function ScannerScreen() {
       {isScanning ? (
         <View style={styles.cameraContainer}>
           <CameraView 
-            style={StyleSheet.absoluteFillObject} 
+            style={StyleSheet.absoluteFill} 
             facing="back"
             onBarcodeScanned={scanned ? undefined : handleBarcodeScanned}
             barcodeScannerSettings={{
@@ -88,7 +93,7 @@ const styles = StyleSheet.create({
   title: { fontWeight: 'bold', marginBottom: 10, color: '#32A041' },
   cameraContainer: { flex: 1, position: 'relative' },
   overlay: {
-    ...StyleSheet.absoluteFillObject,
+    ...StyleSheet.absoluteFill,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'rgba(0,0,0,0.6)',
