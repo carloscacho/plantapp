@@ -140,6 +140,84 @@ type CultivationData = {
   observacoes: string | null;
 };
 
+type PlantTheme = {
+  primary: string;
+  titleColor: string;
+  accent: string;
+  badgeBg: string;
+  badgeText: string;
+  headerSub: string;
+  placeholderBg: string;
+};
+
+function getThemeForHabit(habito: string | null | undefined): PlantTheme {
+  const h = (habito || '').toLowerCase();
+  if (h.includes('erva')) {
+    return {
+      primary: '#1565C0',        // Azul Safira
+      titleColor: '#1565C0',
+      accent: '#0D47A1',
+      badgeBg: '#E3F2FD',
+      badgeText: '#0D47A1',
+      headerSub: '#E3F2FD',
+      placeholderBg: '#E3F2FD',
+    };
+  }
+  if (h.includes('arbusto') && !h.includes('subarbusto')) {
+    return {
+      primary: '#B45309',        // Âmbar / Amarelo Ocre de alto contraste
+      titleColor: '#B45309',
+      accent: '#78350F',
+      badgeBg: '#FEF3C7',
+      badgeText: '#78350F',
+      headerSub: '#FEF3C7',
+      placeholderBg: '#FEF3C7',
+    };
+  }
+  if (h.includes('subarbusto')) {
+    return {
+      primary: '#6A1B9A',        // Roxo Profundo
+      titleColor: '#6A1B9A',
+      accent: '#4A148C',
+      badgeBg: '#F3E5F5',
+      badgeText: '#4A148C',
+      headerSub: '#F3E5F5',
+      placeholderBg: '#F3E5F5',
+    };
+  }
+  if (h.includes('trepadeira')) {
+    return {
+      primary: '#00695C',        // Teal
+      titleColor: '#00695C',
+      accent: '#004D40',
+      badgeBg: '#E0F2F1',
+      badgeText: '#004D40',
+      headerSub: '#E0F2F1',
+      placeholderBg: '#E0F2F1',
+    };
+  }
+  if (h.includes('árvore') || h.includes('arvore')) {
+    return {
+      primary: '#1B5E20',        // Verde Floresta Profundo
+      titleColor: '#1B5E20',
+      accent: '#0D3C12',
+      badgeBg: '#E8F5E9',
+      badgeText: '#1B5E20',
+      headerSub: '#E8F5E9',
+      placeholderBg: '#E8F5E9',
+    };
+  }
+  return {
+    primary: '#2E7D32',          // Verde Botânico Padrão
+    titleColor: '#2E7D32',
+    accent: '#1B5E20',
+    badgeBg: '#E8F5E9',
+    badgeText: '#1B5E20',
+    headerSub: '#E8F5E9',
+    placeholderBg: '#E8F5E9',
+  };
+}
+
 export default function PlantDetailScreen() {
   const { id } = useLocalSearchParams();
   const router = useRouter();
@@ -189,6 +267,12 @@ export default function PlantDetailScreen() {
     loadAllData();
   }, [id, db]);
 
+  const currentTheme = getThemeForHabit(plant?.habito);
+  const displayName = plant ? (plant.nomes_populares || plant.nome_cientifico) : '';
+  const fruitInfo = flowersFruits?.fruto_tipo || flowersFruits?.fruto_categoria;
+  const habitLabel = plant?.habito || 'Espécie Botânica';
+  const locationLabel = plant?.localizacao || plant?.colecao_canteiro;
+
   const renderField = (label: string, value: string | null | undefined) => {
     if (!value || value.trim() === '') return null;
     return (
@@ -204,7 +288,7 @@ export default function PlantDetailScreen() {
     try {
       const renderPdfRow = (label: string, val: string | null | undefined) => {
         if (!val || !val.trim()) return '';
-        return `<tr><td style="padding: 6px 10px; font-weight: bold; width: 35%; color: #2e7d32; border-bottom: 1px solid #e0e0e0;">${label}</td><td style="padding: 6px 10px; border-bottom: 1px solid #e0e0e0;">${val}</td></tr>`;
+        return `<tr><td style="padding: 6px 10px; font-weight: bold; width: 35%; color: ${currentTheme.primary}; border-bottom: 1px solid #e0e0e0;">${label}</td><td style="padding: 6px 10px; border-bottom: 1px solid #e0e0e0;">${val}</td></tr>`;
       };
 
       const html = `
@@ -214,21 +298,25 @@ export default function PlantDetailScreen() {
             <meta charset="utf-8" />
             <style>
               body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 25px; color: #333; }
-              .header { border-bottom: 2px solid #32A041; padding-bottom: 15px; margin-bottom: 20px; }
-              h1 { color: #2e7d32; font-size: 26px; margin: 0 0 4px 0; }
+              .header { border-bottom: 3px solid ${currentTheme.primary}; padding-bottom: 15px; margin-bottom: 20px; }
+              h1 { color: ${currentTheme.primary}; font-size: 26px; margin: 0 0 4px 0; }
               h2 { font-style: italic; color: #555; font-size: 18px; margin: 0 0 10px 0; }
-              .badge { display: inline-block; background-color: #e8f5e9; color: #2e7d32; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 13px; }
-              .section-title { background-color: #32A041; color: white; padding: 6px 12px; font-size: 14px; font-weight: bold; border-radius: 4px; margin-top: 18px; margin-bottom: 8px; }
+              .badge { display: inline-block; background-color: ${currentTheme.badgeBg}; color: ${currentTheme.badgeText}; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 13px; margin-bottom: 8px; }
+              .section-title { background-color: ${currentTheme.primary}; color: white; padding: 6px 12px; font-size: 14px; font-weight: bold; border-radius: 4px; margin-top: 18px; margin-bottom: 8px; }
               table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 15px; }
               .footer { text-align: center; margin-top: 35px; font-size: 11px; color: #888; border-top: 1px solid #ddd; padding-top: 15px; }
             </style>
           </head>
           <body>
             <div class="header">
-              <span class="badge">${plant.id}</span>
-              <h1>${plant.nomes_populares || plant.nome_cientifico}</h1>
+              <span class="badge">${plant.id} — ${habitLabel}</span>
+              <h1>${displayName}</h1>
               <h2>${plant.nome_cientifico} ${plant.autor_nome ? `<small>(${plant.autor_nome})</small>` : ''}</h2>
-              <p style="margin: 0; color: #666; font-size: 13px;"><strong>Família:</strong> ${plant.familia || 'Não informada'} | <strong>Hábito:</strong> ${plant.habito || 'Não informado'}</p>
+              <p style="margin: 0; color: #666; font-size: 13px;">
+                <strong>Família:</strong> ${plant.familia || 'Não informada'} | 
+                <strong>Hábito:</strong> ${habitLabel} | 
+                <strong>Localização:</strong> ${locationLabel || 'Campus IFMS'}
+              </p>
             </div>
 
             <div class="section-title">1. Informações Gerais e Taxonomia</div>
@@ -238,7 +326,8 @@ export default function PlantDetailScreen() {
               ${renderPdfRow('Ciclo de Vida', plant.ciclo_vida)}
               ${renderPdfRow('Origem Biogeográfica', plant.origem_biogeografica)}
               ${renderPdfRow('Status de Ocorrência', plant.status_ocorrencia)}
-              ${renderPdfRow('Localização no Campus', plant.localizacao)}
+              ${renderPdfRow('Localização no Campus', locationLabel)}
+              ${renderPdfRow('Coordenadas GPS', plant.coordenadas)}
               ${renderPdfRow('Observações', plant.observacoes)}
             </table>
 
@@ -305,7 +394,7 @@ export default function PlantDetailScreen() {
                 ${renderPdfRow('Luminosidade', cultivation.luminosidade)}
                 ${renderPdfRow('Necessidade Hídrica', cultivation.necessidade_hidrica)}
                 ${renderPdfRow('Solo / Substrato', cultivation.tipo_solo_substrato)}
-                ${renderPdfRow('pH do Solo', cultivation.ph)}
+                ${renderPdfRow('pH Ideal', cultivation.ph)}
                 ${renderPdfRow('Tolerância ao Frio', cultivation.tolerancia_frio)}
                 ${renderPdfRow('Tolerância à Seca', cultivation.tolerancia_seca)}
                 ${renderPdfRow('Propagação Principal', cultivation.propagacao_principal)}
@@ -333,7 +422,7 @@ export default function PlantDetailScreen() {
   if (loading) {
     return (
       <View style={[styles.container, styles.centered]}>
-        <ActivityIndicator size="large" color="#32A041" />
+        <ActivityIndicator size="large" color={currentTheme.primary} />
       </View>
     );
   }
@@ -341,13 +430,13 @@ export default function PlantDetailScreen() {
   if (!plant) {
     return (
       <View style={styles.container}>
-        <Appbar.Header style={{ backgroundColor: '#32A041' }}>
+        <Appbar.Header style={{ backgroundColor: currentTheme.primary }}>
           <Appbar.BackAction onPress={() => router.back()} color="#fff" />
           <Appbar.Content title="Espécie não encontrada" titleStyle={{ color: '#fff' }} />
         </Appbar.Header>
         <View style={styles.centered}>
           <Text variant="bodyLarge">A espécie solicitada não consta na base de dados.</Text>
-          <Button mode="contained" onPress={() => router.back()} style={{ marginTop: 20 }} buttonColor="#32A041">
+          <Button mode="contained" onPress={() => router.back()} style={{ marginTop: 20 }} buttonColor={currentTheme.primary}>
             Voltar ao Catálogo
           </Button>
         </View>
@@ -355,13 +444,17 @@ export default function PlantDetailScreen() {
     );
   }
 
-  const displayName = plant.nomes_populares || plant.nome_cientifico;
-
   return (
     <View style={styles.container}>
-      <Appbar.Header style={{ backgroundColor: '#32A041' }}>
+      {/* Cabeçalho com a cor temática do hábito (azul p/ ervas, amarelo p/ arbustos, verde p/ árvores...) */}
+      <Appbar.Header style={{ backgroundColor: currentTheme.primary }}>
         <Appbar.BackAction onPress={() => router.back()} color="#fff" />
-        <Appbar.Content title={displayName} subtitle={plant.nome_cientifico} titleStyle={{ color: '#fff', fontWeight: 'bold' }} subtitleStyle={{ color: '#e8f5e9', fontStyle: 'italic' }} />
+        <Appbar.Content
+          title={displayName}
+          subtitle={`${plant.nome_cientifico} • ${habitLabel}`}
+          titleStyle={{ color: '#fff', fontWeight: 'bold' }}
+          subtitleStyle={{ color: currentTheme.headerSub, fontStyle: 'italic', fontSize: 12 }}
+        />
         <Appbar.Action icon="file-pdf-box" color="#fff" onPress={exportPDF} />
       </Appbar.Header>
 
@@ -376,9 +469,13 @@ export default function PlantDetailScreen() {
               transition={400}
             />
           ) : (
-            <View style={styles.placeholderImage}>
-              <Text variant="titleMedium" style={{ color: '#2e7d32', fontWeight: 'bold' }}>🌱 {displayName}</Text>
-              <Text variant="bodySmall" style={{ color: '#666', fontStyle: 'italic' }}>{plant.nome_cientifico}</Text>
+            <View style={[styles.placeholderImage, { backgroundColor: currentTheme.placeholderBg }]}>
+              <Text variant="titleMedium" style={{ color: currentTheme.primary, fontWeight: 'bold' }}>
+                🌱 {displayName}
+              </Text>
+              <Text variant="bodySmall" style={{ color: '#555', fontStyle: 'italic', marginTop: 4 }}>
+                {plant.nome_cientifico}
+              </Text>
             </View>
           )}
 
@@ -387,23 +484,116 @@ export default function PlantDetailScreen() {
 
             {plant.foto_principal &&
               <>
-                <View style={styles.titleRow}>
+            <View style={styles.titleRow}>
                   <Text variant="headlineSmall" style={styles.popularName}>{displayName}</Text>
-                </View>
-                <Text variant="titleMedium" style={styles.scientificTitle}>
-                  {plant.nome_cientifico} {plant.autor_nome ? <Text style={styles.authorText}>({plant.autor_nome})</Text> : null}
-                </Text>
+            </View>
+              <Text variant="titleMedium" style={styles.scientificTitle}>
+                {plant.nome_cientifico} {plant.autor_nome ? <Text style={styles.authorText}>({plant.autor_nome})</Text> : null}
+              </Text>
               </>}
 
+            {/* Clips Coloridos Pastéis com Alto Contraste */}
             <View style={styles.quickTags}>
-              {plant.familia && <Chip icon="tag" style={styles.tagChip} compact>{plant.familia}</Chip>}
-              {plant.habito && <Chip icon="nature" style={styles.tagChip} compact>{plant.habito}</Chip>}
-              {plant.origem_biogeografica && <Chip icon="earth" style={styles.tagChip} compact>{plant.origem_biogeografica}</Chip>}
+              {/* 1. Família (Azul Céu Pastel) */}
+              {plant.familia && (
+                <Chip
+                  icon="tag-outline"
+                  style={[styles.pastelChip, styles.familyChip]}
+                  textStyle={styles.familyText}
+                  compact
+                >
+                  {plant.familia}
+                </Chip>
+              )}
+
+              {/* 2. Localização no Campus (Lilás / Lavanda Pastel) */}
+              {locationLabel && (
+                <Chip
+                  icon="map-marker-outline"
+                  style={[styles.pastelChip, styles.locationChip]}
+                  textStyle={styles.locationText}
+                  compact
+                >
+                  Local: {locationLabel}
+                </Chip>
+              )}
+
+              {/* 3. Flor / Inflorescência (Rosa Pastel) */}
+              {flowersFruits?.inflorescencia && (
+                <Chip
+                  icon="flower"
+                  style={[styles.pastelChip, styles.flowerChip]}
+                  textStyle={styles.flowerText}
+                  compact
+                >
+                  Flor: {flowersFruits.inflorescencia}
+                </Chip>
+              )}
+
+              {/* 4. Fruto (Laranja / Pêssego Pastel) */}
+              {fruitInfo && (
+                <Chip
+                  icon="fruit-cherries"
+                  style={[styles.pastelChip, styles.fruitChip]}
+                  textStyle={styles.fruitText}
+                  compact
+                >
+                  Fruto: {fruitInfo}
+                </Chip>
+              )}
+
+              {/* 5. Uso / Cultivo (Verde Menta Pastel) */}
+              {cultivation?.uso_principal && (
+                <Chip
+                  icon="sprout-outline"
+                  style={[styles.pastelChip, styles.cultivationChip]}
+                  textStyle={styles.cultivationText}
+                  compact
+                >
+                  Uso: {cultivation.uso_principal}
+                </Chip>
+              )}
+
+              {/* 6. Luminosidade (Amarelo Pastel) */}
+              {cultivation?.luminosidade && (
+                <Chip
+                  icon="weather-sunny"
+                  style={[styles.pastelChip, styles.sunChip]}
+                  textStyle={styles.sunText}
+                  compact
+                >
+                  {cultivation.luminosidade}
+                </Chip>
+              )}
+
+              {/* 7. Ciclo de Vida (Cinza Ardósia Pastel) */}
+              {plant.ciclo_vida && (
+                <Chip
+                  icon="timelapse"
+                  style={[styles.pastelChip, styles.cycleChip]}
+                  textStyle={styles.cycleText}
+                  compact
+                >
+                  Ciclo: {plant.ciclo_vida}
+                </Chip>
+              )}
+
+              {/* 8. Origem Biogeográfica (Âmbar Suave Pastel) */}
+              {plant.origem_biogeografica && (
+                <Chip
+                  icon="earth"
+                  style={[styles.pastelChip, styles.originChip]}
+                  textStyle={styles.originText}
+                  compact
+                >
+                  Origem: {plant.origem_biogeografica}
+                </Chip>
+              )}
             </View>
           </Card.Content>
         </Card>
 
-        {/* Seletor de Abas Botânicas */}
+        {/* Seletor de Abas Botânicas com tema dinâmico */}
         <View style={styles.tabsContainer}>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.tabsScroll}>
             {[
@@ -412,18 +602,24 @@ export default function PlantDetailScreen() {
               { id: 'folhas', label: 'Folhas', icon: 'leaf' },
               { id: 'flor_fruto', label: 'Flor & Fruto', icon: 'flower' },
               { id: 'cultivo', label: 'Cultivo & Usos', icon: 'sprout' }
-            ].map(tab => (
-              <Chip
-                key={tab.id}
-                selected={selectedTab === tab.id}
-                onPress={() => setSelectedTab(tab.id)}
-                style={[styles.sectionTab, selectedTab === tab.id && styles.sectionTabActive]}
-                textStyle={selectedTab === tab.id ? styles.sectionTabTextActive : styles.sectionTabText}
-                showSelectedOverlay
-              >
-                {tab.label}
-              </Chip>
-            ))}
+            ].map(tab => {
+              const isActive = selectedTab === tab.id;
+              return (
+                <Chip
+                  key={tab.id}
+                  selected={isActive}
+                  onPress={() => setSelectedTab(tab.id)}
+                  style={[
+                    styles.sectionTab,
+                    isActive && { backgroundColor: currentTheme.primary, borderColor: currentTheme.primary }
+                  ]}
+                  textStyle={isActive ? styles.sectionTabTextActive : styles.sectionTabText}
+                  showSelectedOverlay
+                >
+                  {tab.label}
+                </Chip>
+              );
+            })}
           </ScrollView>
         </View>
 
@@ -432,7 +628,9 @@ export default function PlantDetailScreen() {
           <Card.Content>
             {selectedTab === 'geral' && (
               <View>
-                <Text variant="titleMedium" style={styles.sectionHeader}>Classificação e Ocorrência</Text>
+                <Text variant="titleMedium" style={[styles.sectionHeader, { color: currentTheme.primary }]}>
+                  Classificação e Ocorrência
+                </Text>
                 {renderField('Gênero', plant.genero)}
                 {renderField('Família', plant.familia)}
                 {renderField('Grupo Taxonômico', plant.grupo_taxonomico)}
@@ -441,7 +639,7 @@ export default function PlantDetailScreen() {
                 {renderField('Ciclo de Vida', plant.ciclo_vida)}
                 {renderField('Origem Biogeográfica', plant.origem_biogeografica)}
                 {renderField('Status de Ocorrência', plant.status_ocorrencia)}
-                {renderField('Localização no Campus', plant.localizacao)}
+                {renderField('Localização no Campus', locationLabel)}
                 {renderField('Coleção / Canteiro', plant.colecao_canteiro)}
                 {renderField('Coordenadas GPS', plant.coordenadas)}
                 {renderField('Observações', plant.observacoes)}
@@ -450,7 +648,9 @@ export default function PlantDetailScreen() {
 
             {selectedTab === 'raiz_caule' && (
               <View>
-                <Text variant="titleMedium" style={styles.sectionHeader}>Morfologia de Raiz e Caule</Text>
+                <Text variant="titleMedium" style={[styles.sectionHeader, { color: currentTheme.primary }]}>
+                  Morfologia de Raiz e Caule
+                </Text>
                 {rootsStems ? (
                   <>
                     {renderField('Sistema Radicular', rootsStems.sistema_radicular)}
@@ -479,7 +679,9 @@ export default function PlantDetailScreen() {
 
             {selectedTab === 'folhas' && (
               <View>
-                <Text variant="titleMedium" style={styles.sectionHeader}>Morfologia Foliar</Text>
+                <Text variant="titleMedium" style={[styles.sectionHeader, { color: currentTheme.primary }]}>
+                  Morfologia Foliar
+                </Text>
                 {leaves ? (
                   <>
                     {renderField('Persistência', leaves.persistencia)}
@@ -517,7 +719,9 @@ export default function PlantDetailScreen() {
 
             {selectedTab === 'flor_fruto' && (
               <View>
-                <Text variant="titleMedium" style={styles.sectionHeader}>Estruturas Reprodutivas</Text>
+                <Text variant="titleMedium" style={[styles.sectionHeader, { color: currentTheme.primary }]}>
+                  Estruturas Reprodutivas
+                </Text>
                 {flowersFruits ? (
                   <>
                     {renderField('Sexualidade da Planta', flowersFruits.sexualidade_planta)}
@@ -551,7 +755,9 @@ export default function PlantDetailScreen() {
 
             {selectedTab === 'cultivo' && (
               <View>
-                <Text variant="titleMedium" style={styles.sectionHeader}>Requisitos de Cultivo e Usos</Text>
+                <Text variant="titleMedium" style={[styles.sectionHeader, { color: currentTheme.primary }]}>
+                  Requisitos de Cultivo e Usos
+                </Text>
                 {cultivation ? (
                   <>
                     {renderField('Clima', cultivation.clima)}
@@ -586,14 +792,14 @@ export default function PlantDetailScreen() {
           </Card.Content>
         </Card>
 
-        {/* Botão de Exportação em PDF */}
+        {/* Botão de Exportação em PDF com cor temática */}
         <Button
           mode="contained"
           icon="file-pdf-box"
           onPress={exportPDF}
           style={styles.pdfButton}
           contentStyle={{ height: 48 }}
-          buttonColor="#1976D2"
+          buttonColor={currentTheme.primary}
         >
           Exportar Ficha Técnica Completa em PDF
         </Button>
@@ -603,34 +809,80 @@ export default function PlantDetailScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#f5f5f5' },
+  container: { flex: 1, backgroundColor: '#f6f7f8' },
   centered: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20 },
-  mainCard: { backgroundColor: '#fff', borderRadius: 12, overflow: 'hidden', marginBottom: 16 },
+  mainCard: { backgroundColor: '#fff', borderRadius: 14, overflow: 'hidden', marginBottom: 16, elevation: 2 },
   image: { width: '100%', height: 220, backgroundColor: '#e0e0e0' },
   placeholderImage: {
     width: '100%',
-    height: 140,
-    backgroundColor: '#e8f5e9',
+    height: 120,
     justifyContent: 'center',
     alignItems: 'center',
     borderBottomWidth: 1,
-    borderColor: '#c8e6c9',
+    borderColor: '#e0e0e0',
   },
-  titleRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  popularName: { fontWeight: 'bold', color: '#2e7d32', flex: 1, textTransform: 'capitalize' },
-  badge: { backgroundColor: '#32A041', color: '#fff', fontWeight: 'bold', fontSize: 13, paddingHorizontal: 6 },
-  scientificTitle: { fontStyle: 'italic', color: '#555', marginTop: 2, marginBottom: 12 },
-  authorText: { fontStyle: 'normal', color: '#888', fontSize: 13 },
+  titleRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'nowrap' },
+  popularName: { fontWeight: 'bold', flex: 1, marginRight: 8, textTransform: 'capitalize', fontSize: 20 },
+  typeBadge: {
+    fontWeight: 'bold',
+    fontSize: 12,
+    paddingHorizontal: 8,
+    height: 24,
+    borderRadius: 12,
+    lineHeight: 22,
+    textTransform: 'capitalize',
+  },
+  scientificRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 2, marginBottom: 12 },
+  scientificTitle: { fontStyle: 'italic', color: '#555', fontSize: 14, flex: 1 },
+  authorText: { fontStyle: 'normal', color: '#888', fontSize: 12 },
+  codeText: { color: '#888', fontWeight: 'bold', fontSize: 11, backgroundColor: '#f0f0f0', paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 },
   quickTags: { flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginTop: 4 },
-  tagChip: { backgroundColor: '#f1f8e9' },
+
+  /* Estilos Base para Chips Pastéis */
+  pastelChip: {
+    borderRadius: 8,
+    height: 28,
+  },
+
+  /* 1. Família (Azul Céu Pastel com Azul Escuro) */
+  familyChip: { backgroundColor: '#E0F2FE' },
+  familyText: { fontSize: 11, color: '#0369A1', fontWeight: '600' },
+
+  /* 2. Localização (Lilás / Lavanda Pastel com Roxo Escuro) */
+  locationChip: { backgroundColor: '#EDE9FE' },
+  locationText: { fontSize: 11, color: '#5B21B6', fontWeight: '600' },
+
+  /* 3. Flor (Rosa Pastel com Bordô Escuro) */
+  flowerChip: { backgroundColor: '#FCE7F3' },
+  flowerText: { fontSize: 11, color: '#9D174D', fontWeight: '600' },
+
+  /* 4. Fruto (Pêssego Pastel com Terracota Escuro) */
+  fruitChip: { backgroundColor: '#FFEDD5' },
+  fruitText: { fontSize: 11, color: '#9A3412', fontWeight: '600' },
+
+  /* 5. Cultivo / Uso (Verde Menta Pastel com Floresta Escuro) */
+  cultivationChip: { backgroundColor: '#DCFCE7' },
+  cultivationText: { fontSize: 11, color: '#15803D', fontWeight: '600' },
+
+  /* 6. Sol / Luminosidade (Amarelo Pastel com Marrom Ocre Escuro) */
+  sunChip: { backgroundColor: '#FEF9C3' },
+  sunText: { fontSize: 11, color: '#854D0E', fontWeight: '600' },
+
+  /* 7. Ciclo (Cinza Ardósia Pastel com Ardósia Escuro) */
+  cycleChip: { backgroundColor: '#F1F5F9' },
+  cycleText: { fontSize: 11, color: '#334155', fontWeight: '600' },
+
+  /* 8. Origem (Âmbar Suave Pastel com Terracota Escuro) */
+  originChip: { backgroundColor: '#FEF3C7' },
+  originText: { fontSize: 11, color: '#92400E', fontWeight: '600' },
+
   tabsContainer: { marginBottom: 12 },
   tabsScroll: { gap: 8 },
   sectionTab: { backgroundColor: '#fff', borderColor: '#ccc' },
-  sectionTabActive: { backgroundColor: '#32A041' },
   sectionTabText: { color: '#555', fontSize: 13 },
   sectionTabTextActive: { color: '#fff', fontWeight: 'bold', fontSize: 13 },
   detailsCard: { backgroundColor: '#fff', borderRadius: 12, borderColor: '#e0e0e0' },
-  sectionHeader: { fontWeight: 'bold', color: '#32A041', marginBottom: 12, borderBottomWidth: 1, borderColor: '#eee', paddingBottom: 6 },
+  sectionHeader: { fontWeight: 'bold', marginBottom: 12, borderBottomWidth: 1, borderColor: '#eee', paddingBottom: 6 },
   fieldRow: { marginBottom: 10, paddingBottom: 6, borderBottomWidth: 1, borderColor: '#f5f5f5' },
   fieldLabel: { color: '#777', fontWeight: '600', marginBottom: 2 },
   fieldValue: { color: '#222', fontSize: 14, lineHeight: 20 },
