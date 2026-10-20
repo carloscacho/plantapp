@@ -837,6 +837,7 @@ const styles = StyleSheet.create({
   authorText: { fontStyle: 'normal', color: '#888', fontSize: 12 },
   codeText: { color: '#888', fontWeight: 'bold', fontSize: 11, backgroundColor: '#f0f0f0', paddingHorizontal: 6, paddingVertical: 2, borderRadius: 4 },
   quickTags: { flexDirection: 'row', flexWrap: 'wrap', gap: 6, marginTop: 4 },
+  badge: { backgroundColor: '#32A041', color: '#fff', fontWeight: 'bold', fontSize: 13, paddingHorizontal: 6 },
 
   /* Estilos Base para Chips Pastéis */
   pastelChip: {

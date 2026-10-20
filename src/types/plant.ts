@@ -1,0 +1,152 @@
+export type PlantData = {
+  id: string;
+  nome_cientifico: string;
+  autor_nome: string | null;
+  nomes_populares: string | null;
+  familia: string | null;
+  genero: string | null;
+  grupo_taxonomico: string | null;
+  habito: string | null;
+  porte_altura: string | null;
+  ciclo_vida: string | null;
+  origem_biogeografica: string | null;
+  status_ocorrencia: string | null;
+  localizacao: string | null;
+  coordenadas: string | null;
+  colecao_canteiro: string | null;
+  codigo_qr: string | null;
+  foto_principal: string | null;
+  data_registro: string | null;
+  responsavel: string | null;
+  observacoes: string | null;
+};
+
+export type RootsStemsData = {
+  sistema_radicular: string | null;
+  habitat_raiz: string | null;
+  raiz_primaria: string | null;
+  raizes_adventicias: string | null;
+  modificacao_raiz: string | null;
+  gravitropismo_raiz: string | null;
+  posicao_caule: string | null;
+  tipo_caule: string | null;
+  consistencia_caule: string | null;
+  ramificacao: string | null;
+  gema_apical: string | null;
+  gemas_axilares: string | null;
+  gemas_reprodutivas: string | null;
+  estrutura_reserva: string | null;
+  estruturas_fixacao: string | null;
+  espinhos_aculeos: string | null;
+  lenticelas: string | null;
+  observacoes: string | null;
+};
+
+export type LeavesData = {
+  persistencia: string | null;
+  composicao: string | null;
+  filotaxia: string | null;
+  insercao: string | null;
+  peciolo: string | null;
+  bainha: string | null;
+  ligula: string | null;
+  estipula: string | null;
+  limbo_forma: string | null;
+  limbo_apice: string | null;
+  limbo_base: string | null;
+  limbo_margem: string | null;
+  nervacao: string | null;
+  textura_superficial: string | null;
+  indumento: string | null;
+  consistencia: string | null;
+  cor_variegacao: string | null;
+  dimensoes: string | null;
+  folha_composta_tipo: string | null;
+  num_foliolos: string | null;
+  forma_foliolos: string | null;
+  raquis: string | null;
+  pulvino: string | null;
+  metamorfose_foliar: string | null;
+  gavinhas: string | null;
+  espinhos_foliares: string | null;
+  bracteas: string | null;
+  observacoes: string | null;
+};
+
+export type FlowersFruitsData = {
+  sexualidade_planta: string | null;
+  inflorescencia: string | null;
+  posicao_inflorescencia: string | null;
+  flor_sexo: string | null;
+  flor_simetria: string | null;
+  perianto: string | null;
+  calice: string | null;
+  corola: string | null;
+  num_sepalas: string | null;
+  num_petalas: string | null;
+  conacao_aderencia: string | null;
+  androceu_num_estames: string | null;
+  anteras: string | null;
+  gineceu_num_carpelos: string | null;
+  ovario: string | null;
+  num_loculos: string | null;
+  placentacao: string | null;
+  hipanto: string | null;
+  epoca_floracao: string | null;
+  polinizadores: string | null;
+  fruto_categoria: string | null;
+  fruto_consistencia: string | null;
+  fruto_deiscencia: string | null;
+  fruto_tipo: string | null;
+  num_sementes: string | null;
+  dispersao: string | null;
+  pseudofruto: string | null;
+  epoca_frutificacao: string | null;
+  observacoes: string | null;
+};
+
+export type CultivationData = {
+  clima: string | null;
+  faixa_temperatura: string | null;
+  luminosidade: string | null;
+  necessidade_hidrica: string | null;
+  umidade_ar: string | null;
+  tipo_solo_substrato: string | null;
+  drenagem: string | null;
+  ph: string | null;
+  fertilidade: string | null;
+  tolerancia_frio: string | null;
+  tolerancia_seca: string | null;
+  tolerancia_encharcamento: string | null;
+  propagacao_principal: string | null;
+  outras_propagacoes: string | null;
+  poda_manutencao: string | null;
+  pragas_observadas: string | null;
+  doencas_observadas: string | null;
+  toxicidade: string | null;
+  uso_principal: string | null;
+  outros_usos: string | null;
+  exigencias_edafoclimaticas: string | null;
+  adaptacao_regional: string | null;
+  observacoes: string | null;
+};
+
+export type PlantDetailBundle = {
+  plant: PlantData;
+  rootsStems: RootsStemsData | null;
+  leaves: LeavesData | null;
+  flowersFruits: FlowersFruitsData | null;
+  cultivation: CultivationData | null;
+};
+
+export type PlantTheme = {
+  primary: string;
+  titleColor: string;
+  accent: string;
+  badgeBg: string;
+  badgeText: string;
+  headerSub: string;
+  placeholderBg: string;
+};
+
+export type BotanicalTabId = 'geral' | 'raiz_caule' | 'folhas' | 'flor_fruto' | 'cultivo';
