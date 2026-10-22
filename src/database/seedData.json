@@ -2,69 +2,363 @@
   "areas": [
     {
       "id": "A001",
-      "nome": "Campo Externo",
-      "descricao": "Área de campo aberto com árvores nativas e espécies de grande porte.",
-      "tipo": "campo",
-      "cor": "#4CAF50",
-      "icone": "tree",
+      "nome": "Pomar",
+      "descricao": "Área do pomar com espécies frutíferas nativas do Cerrado e cultivadas.",
+      "tipo": "pomar",
+      "cor": "#f2fa11",
+      "icone": "fruit-cherries",
       "opacidade": 0.35,
-      "centro_latitude": -22.5312,
-      "centro_longitude": -55.7145
+      "centro_latitude": -22.62156824,
+      "centro_longitude": -55.60971592,
+      "poligono_coords": [
+        {
+          "lat": -22.6210972,
+          "lng": -55.6104548
+        },
+        {
+          "lat": -22.6208021,
+          "lng": -55.6095173
+        },
+        {
+          "lat": -22.6222069,
+          "lng": -55.6086787
+        },
+        {
+          "lat": -22.6226378,
+          "lng": -55.609474
+        },
+        {
+          "lat": -22.6210972,
+          "lng": -55.6104548
+        }
+      ]
     },
     {
       "id": "A002",
-      "nome": "Pomar",
-      "descricao": "Espécies frutíferas cultivadas e nativas da região do Cerrado.",
-      "tipo": "pomar",
-      "cor": "#FF9800",
-      "icone": "fruit-cherries",
+      "nome": "Horta",
+      "descricao": "Canteiros de hortaliças, olericultura e plantas medicinais e condimentares.",
+      "tipo": "horta",
+      "cor": "#02ff0a",
+      "icone": "carrot",
       "opacidade": 0.35,
-      "centro_latitude": -22.532,
-      "centro_longitude": -55.7138
+      "centro_latitude": -22.6197142,
+      "centro_longitude": -55.607601262500005,
+      "poligono_coords": [
+        {
+          "lat": -22.6200519,
+          "lng": -55.6081512
+        },
+        {
+          "lat": -22.6195734,
+          "lng": -55.6083166
+        },
+        {
+          "lat": -22.6193291,
+          "lng": -55.6072138
+        },
+        {
+          "lat": -22.6195098,
+          "lng": -55.6071007
+        },
+        {
+          "lat": -22.6196103,
+          "lng": -55.6073382
+        },
+        {
+          "lat": -22.6197936,
+          "lng": -55.6072692
+        },
+        {
+          "lat": -22.6197936,
+          "lng": -55.6072692
+        },
+        {
+          "lat": -22.6200519,
+          "lng": -55.6081512
+        }
+      ]
     },
     {
       "id": "A003",
-      "nome": "Viveiro de Ornamentais",
-      "descricao": "Viveiro com mudas e espécies de valor paisagístico e ornamental.",
+      "nome": "Viveiro Ornamentais",
+      "descricao": "Estufa e viveiro de produção de mudas ornamentais, flores e plantas de paisagismo.",
       "tipo": "viveiro",
-      "cor": "#9C27B0",
+      "cor": "#ba2341",
       "icone": "flower",
       "opacidade": 0.35,
-      "centro_latitude": -22.5308,
-      "centro_longitude": -55.7152
+      "centro_latitude": -22.62019236,
+      "centro_longitude": -55.60795546000001,
+      "poligono_coords": [
+        {
+          "lat": -22.6203751,
+          "lng": -55.6081733
+        },
+        {
+          "lat": -22.6201079,
+          "lng": -55.6082615
+        },
+        {
+          "lat": -22.6199297,
+          "lng": -55.6076825
+        },
+        {
+          "lat": -22.620174,
+          "lng": -55.6074867
+        },
+        {
+          "lat": -22.6203751,
+          "lng": -55.6081733
+        }
+      ]
     },
     {
       "id": "A004",
-      "nome": "Pátio",
-      "descricao": "Pátio central e áreas de convivência entre os blocos educacionais.",
-      "tipo": "patio",
-      "cor": "#2196F3",
-      "icone": "domain",
+      "nome": "Culturas",
+      "descricao": "Campos experimentais e de produção de grandes culturas (soja, milho, cereais).",
+      "tipo": "culturas",
+      "cor": "#FF0000",
+      "icone": "barley",
       "opacidade": 0.35,
-      "centro_latitude": -22.5315,
-      "centro_longitude": -55.714
+      "centro_latitude": -22.620608466666667,
+      "centro_longitude": -55.607414772222214,
+      "poligono_coords": [
+        {
+          "lat": -22.6185228,
+          "lng": -55.607335
+        },
+        {
+          "lat": -22.6181652,
+          "lng": -55.6060355
+        },
+        {
+          "lat": -22.6211418,
+          "lng": -55.6054139
+        },
+        {
+          "lat": -22.6213392,
+          "lng": -55.6062292
+        },
+        {
+          "lat": -22.6211194,
+          "lng": -55.6067175
+        },
+        {
+          "lat": -22.6215068,
+          "lng": -55.6073108
+        },
+        {
+          "lat": -22.6222482,
+          "lng": -55.6075772
+        },
+        {
+          "lat": -22.6223674,
+          "lng": -55.6085135
+        },
+        {
+          "lat": -22.6217902,
+          "lng": -55.6088729
+        },
+        {
+          "lat": -22.6217679,
+          "lng": -55.6087276
+        },
+        {
+          "lat": -22.62144,
+          "lng": -55.6085863
+        },
+        {
+          "lat": -22.6210303,
+          "lng": -55.6088285
+        },
+        {
+          "lat": -22.6205758,
+          "lng": -55.6070931
+        },
+        {
+          "lat": -22.620166,
+          "lng": -55.6073877
+        },
+        {
+          "lat": -22.6200873,
+          "lng": -55.607123
+        },
+        {
+          "lat": -22.619644,
+          "lng": -55.6073127
+        },
+        {
+          "lat": -22.6195173,
+          "lng": -55.6070665
+        },
+        {
+          "lat": -22.6185228,
+          "lng": -55.607335
+        }
+      ]
     },
     {
       "id": "A005",
-      "nome": "Horta",
-      "descricao": "Canteiros de hortaliças, ervas condimentares e plantas medicinais.",
-      "tipo": "horta",
-      "cor": "#8BC34A",
-      "icone": "carrot",
+      "nome": "Campo Agrostológico",
+      "descricao": "Coleção de forrageiras, pastagens, gramíneas e leguminosas para nutrição animal.",
+      "tipo": "agrostologia",
+      "cor": "#ECA009",
+      "icone": "grass",
       "opacidade": 0.35,
-      "centro_latitude": -22.5325,
-      "centro_longitude": -55.7148
+      "centro_latitude": -22.6204726,
+      "centro_longitude": -55.60773684000001,
+      "poligono_coords": [
+        {
+          "lat": -22.6203535,
+          "lng": -55.607953
+        },
+        {
+          "lat": -22.620239,
+          "lng": -55.6075946
+        },
+        {
+          "lat": -22.6206258,
+          "lng": -55.6074071
+        },
+        {
+          "lat": -22.6207912,
+          "lng": -55.6077765
+        },
+        {
+          "lat": -22.6203535,
+          "lng": -55.607953
+        }
+      ]
     },
     {
       "id": "A006",
-      "nome": "Campo Agroecológico",
-      "descricao": "Área dedicada a sistemas agroecológicos, rotação de culturas e adubação verde.",
-      "tipo": "campo",
-      "cor": "#795548",
-      "icone": "spa",
+      "nome": "Pátio",
+      "descricao": "Pátio central, bloco pedagógico e administrativo, laboratórios, quadra e convivência.",
+      "tipo": "patio",
+      "cor": "#9D00FF",
+      "icone": "domain",
       "opacidade": 0.35,
-      "centro_latitude": -22.533,
-      "centro_longitude": -55.7155
+      "centro_latitude": -22.61982952,
+      "centro_longitude": -55.609416939999996,
+      "poligono_coords": [
+        {
+          "lat": -22.6189651,
+          "lng": -55.6084959
+        },
+        {
+          "lat": -22.6204097,
+          "lng": -55.6082352
+        },
+        {
+          "lat": -22.6210995,
+          "lng": -55.6104556
+        },
+        {
+          "lat": -22.6197082,
+          "lng": -55.6114021
+        },
+        {
+          "lat": -22.6189651,
+          "lng": -55.6084959
+        }
+      ]
+    },
+    {
+      "id": "A007",
+      "nome": "Reserva",
+      "descricao": "Área de vegetação nativa preservada, mata e refúgio ecológico do campus.",
+      "tipo": "reserva",
+      "cor": "#3f39db",
+      "icone": "forest",
+      "opacidade": 0.35,
+      "centro_latitude": -22.622312581818186,
+      "centro_longitude": -55.606592209090905,
+      "poligono_coords": [
+        {
+          "lat": -22.6232439,
+          "lng": -55.607749
+        },
+        {
+          "lat": -22.6218851,
+          "lng": -55.6074004
+        },
+        {
+          "lat": -22.6214054,
+          "lng": -55.6071228
+        },
+        {
+          "lat": -22.6212236,
+          "lng": -55.6066773
+        },
+        {
+          "lat": -22.6212505,
+          "lng": -55.6063513
+        },
+        {
+          "lat": -22.6214918,
+          "lng": -55.6060866
+        },
+        {
+          "lat": -22.6221295,
+          "lng": -55.6056379
+        },
+        {
+          "lat": -22.622195,
+          "lng": -55.6051924
+        },
+        {
+          "lat": -22.6232856,
+          "lng": -55.6049923
+        },
+        {
+          "lat": -22.6240841,
+          "lng": -55.6075553
+        },
+        {
+          "lat": -22.6232439,
+          "lng": -55.607749
+        }
+      ]
+    },
+    {
+      "id": "A008",
+      "nome": "ILP",
+      "descricao": "Integração Lavoura-Pecuária: área dedicada a rotação e consórcio lavoura-pecuária.",
+      "tipo": "ilp",
+      "cor": "#a1a1a1",
+      "icone": "cow",
+      "opacidade": 0.35,
+      "centro_latitude": -22.621610142857143,
+      "centro_longitude": -55.60565354285715,
+      "poligono_coords": [
+        {
+          "lat": -22.6213488,
+          "lng": -55.6061996
+        },
+        {
+          "lat": -22.6220997,
+          "lng": -55.6056831
+        },
+        {
+          "lat": -22.6221235,
+          "lng": -55.6054377
+        },
+        {
+          "lat": -22.622046,
+          "lng": -55.605244
+        },
+        {
+          "lat": -22.6211521,
+          "lng": -55.6054054
+        },
+        {
+          "lat": -22.6211521,
+          "lng": -55.6054054
+        },
+        {
+          "lat": -22.6213488,
+          "lng": -55.6061996
+        }
+      ]
     }
   ],
   "plants": [

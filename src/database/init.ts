@@ -327,4 +327,37 @@ export async function initializeDatabase(db: SQLiteDatabase) {
       }
     });
   }
+
+  // Sempre sincroniza as áreas com o seedData para garantir as 8 áreas com polígonos e cores atualizadas
+  try {
+    for (const a of seedData.areas) {
+      await db.runAsync(
+        `INSERT INTO areas (id, nome, descricao, tipo, cor, icone, opacidade, centro_latitude, centro_longitude, poligono_coords)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+         ON CONFLICT(id) DO UPDATE SET
+           nome = excluded.nome,
+           descricao = excluded.descricao,
+           tipo = excluded.tipo,
+           cor = excluded.cor,
+           icone = excluded.icone,
+           opacidade = excluded.opacidade,
+           centro_latitude = excluded.centro_latitude,
+           centro_longitude = excluded.centro_longitude,
+           poligono_coords = excluded.poligono_coords`,
+        a.id,
+        a.nome,
+        a.descricao,
+        a.tipo,
+        a.cor,
+        a.icone,
+        a.opacidade,
+        a.centro_latitude,
+        a.centro_longitude,
+        JSON.stringify(a.poligono_coords)
+      );
+    }
+  } catch (syncErr) {
+    console.warn('Erro ao sincronizar áreas:', syncErr);
+  }
 }
+
