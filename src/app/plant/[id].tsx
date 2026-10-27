@@ -1,6 +1,7 @@
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
+import { useSync } from '../../database/SyncProvider';
 import { useState, useEffect } from 'react';
 import { Appbar, Text, Card, ActivityIndicator, Button, Chip, Badge } from 'react-native-paper';
 import { Image } from 'expo-image';
@@ -222,6 +223,7 @@ export default function PlantDetailScreen() {
   const { id } = useLocalSearchParams();
   const router = useRouter();
   const db = useSQLiteContext();
+  const { dataVersion } = useSync();
 
   const [loading, setLoading] = useState(true);
   const [selectedTab, setSelectedTab] = useState('geral');
@@ -265,7 +267,7 @@ export default function PlantDetailScreen() {
     }
 
     loadAllData();
-  }, [id, db]);
+  }, [id, db, dataVersion]);
 
   const currentTheme = getThemeForHabit(plant?.habito);
   const displayName = plant ? (plant.nomes_populares || plant.nome_cientifico) : '';

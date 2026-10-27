@@ -3,6 +3,7 @@ import { Link } from 'expo-router';
 import { useSQLiteContext } from 'expo-sqlite';
 import { useState, useEffect } from 'react';
 import { Appbar, Searchbar, Card, Text, Chip, Badge } from 'react-native-paper';
+import { useSync } from '../../database/SyncProvider';
 
 type Plant = {
   id: string;
@@ -89,6 +90,7 @@ const HABIT_FILTERS = ['Todos', 'Árvore', 'Arbusto', 'Erva', 'Subarbusto', 'Tre
 
 export default function CatalogoScreen() {
   const db = useSQLiteContext();
+  const { dataVersion, syncing, syncNow } = useSync();
   const [plants, setPlants] = useState<Plant[]>([]);
   const [search, setSearch] = useState('');
   const [selectedHabit, setSelectedHabit] = useState('Todos');
@@ -148,7 +150,7 @@ export default function CatalogoScreen() {
     return () => {
       isMounted = false;
     };
-  }, [db, search, selectedHabit]);
+  }, [db, search, selectedHabit, dataVersion]);
 
   return (
     <View style={styles.container}>
@@ -171,10 +173,17 @@ export default function CatalogoScreen() {
       ) : (
         <Appbar.Header style={{ backgroundColor: currentTheme.primary }}>
           <Appbar.Content
-            title="Ka'avoHeka - Catálogo"
+            title="BuscaKa'avo - Catálogo"
             subtitle={selectedHabit !== 'Todos' ? `Filtro ativo: ${selectedHabit}` : 'Espécies do Campus'}
             titleStyle={{ color: '#fff', fontWeight: 'bold' }}
             subtitleStyle={{ color: '#ffffffdd', fontSize: 12 }}
+          />
+          <Appbar.Action
+            icon={syncing ? 'cloud-sync' : 'cloud-refresh'}
+            color="#fff"
+            disabled={syncing}
+            onPress={syncNow}
+            accessibilityLabel="Sincronizar dados com o servidor"
           />
           <Appbar.Action icon="magnify" color="#fff" onPress={() => setIsSearchVisible(true)} />
         </Appbar.Header>

@@ -1,6 +1,7 @@
 import { View, StyleSheet, FlatList, ScrollView, Image, TouchableOpacity, Platform, Dimensions, Alert } from 'react-native';
 import { Appbar, Text, Card, Chip, IconButton, Badge, SegmentedButtons, Portal, Modal, Button, Divider, ActivityIndicator } from 'react-native-paper';
 import { useSQLiteContext } from 'expo-sqlite';
+import { useSync } from '../../database/SyncProvider';
 import { useState, useEffect, useMemo, useRef } from 'react';
 import * as Location from 'expo-location';
 
@@ -36,6 +37,7 @@ const CAMPUS_CENTER_LNG = -55.60751;
 
 export default function MapScreen() {
   const db = useSQLiteContext();
+  const { dataVersion } = useSync();
   const [areas, setAreas] = useState<CampusArea[]>([]);
   const [selectedArea, setSelectedArea] = useState<CampusArea | null>(null);
   const [modalVisible, setModalVisible] = useState(false);
@@ -76,11 +78,16 @@ export default function MapScreen() {
 
     return () => {
       isMounted = false;
+    };
+  }, [db, dataVersion]);
+
+  useEffect(() => {
+    return () => {
       if (locationSubscriptionRef.current) {
         locationSubscriptionRef.current.remove();
       }
     };
-  }, [db]);
+  }, []);
 
   // Função para ativar e rastrear a posição do usuário no mapa via GPS
   const handleStartGps = async () => {
@@ -276,7 +283,7 @@ export default function MapScreen() {
 
     // 1. Camada Satélite Esri World Imagery (Alta resolução de Sanga Puitã)
     const esriSatellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-      attribution: 'Esri &copy; IFPlantas',
+      attribution: "Esri &copy; BuscaKa'avo",
       maxZoom: 19
     }).addTo(map);
 
@@ -408,7 +415,7 @@ export default function MapScreen() {
     <View style={styles.container}>
       <Appbar.Header style={styles.appBar}>
         <Appbar.Content
-          title="IFPlantas — Mapa do Campus"
+          title="BuscaKa'avo — Mapa do Campus"
           subtitle="IFMS Sanga Puitã • BR-463 Km 14"
           titleStyle={styles.appBarTitle}
           subtitleStyle={styles.appBarSubtitle}

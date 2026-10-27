@@ -1,5 +1,5 @@
 -- ============================================================================
--- IFPlantas — Schema do Banco de Dados
+-- BuscaKa'avo — Schema do Banco de Dados
 -- Baseado na planilha "Classificação Botânica Preenchida"
 -- Banco: SQLite (expo-sqlite)
 -- ============================================================================

@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "platapp",
-    "slug": "platapp",
+    "name": "BuscaKa'avo",
+    "slug": "buscakaavo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "platapp",
+    "scheme": "buscakaavo",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"

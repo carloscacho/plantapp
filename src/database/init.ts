@@ -206,6 +206,12 @@ export async function initializeDatabase(db: SQLiteDatabase) {
       FOREIGN KEY (plant_id) REFERENCES plants(id) ON DELETE CASCADE
     );
 
+    -- Metadados da sincronização com o banco online (ex: last_sync_at)
+    CREATE TABLE IF NOT EXISTS sync_meta (
+      key   TEXT PRIMARY KEY NOT NULL,
+      value TEXT
+    );
+
     -- Índices
     CREATE INDEX IF NOT EXISTS idx_plants_familia           ON plants(familia);
     CREATE INDEX IF NOT EXISTS idx_plants_grupo_taxonomico  ON plants(grupo_taxonomico);
@@ -222,6 +228,13 @@ export async function initializeDatabase(db: SQLiteDatabase) {
     CREATE INDEX IF NOT EXISTS idx_plant_locations_area_id   ON plant_locations(area_id);
     CREATE INDEX IF NOT EXISTS idx_plant_locations_coords    ON plant_locations(latitude, longitude);
   `);
+
+  // Depois da primeira sincronização o banco online é a fonte da verdade;
+  // o seedData só serve de carga inicial para uso offline antes disso.
+  const synced = await db.getFirstAsync<{ value: string }>(
+    "SELECT value FROM sync_meta WHERE key = 'last_sync_at'"
+  );
+  if (synced) return;
 
   // Verificar se o banco já contém dados
   const result = await db.getFirstAsync<{ count: number }>('SELECT COUNT(*) as count FROM plants');
@@ -328,7 +341,7 @@ export async function initializeDatabase(db: SQLiteDatabase) {
     });
   }
 
-  // Sempre sincroniza as áreas com o seedData para garantir as 8 áreas com polígonos e cores atualizadas
+  // Enquanto não houver sincronização online, mantém as áreas do seedData para garantir as 8 áreas com polígonos e cores atualizadas
   try {
     for (const a of seedData.areas) {
       await db.runAsync(
