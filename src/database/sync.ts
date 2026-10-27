@@ -56,12 +56,13 @@ async function fetchSnapshot(): Promise<SyncSnapshot> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), SYNC_TIMEOUT_MS);
   try {
-    const response = await fetch(`${API_URL}/api/public/sync`, {
+    const url = `${API_URL}/api/public/sync`;
+    const response = await fetch(url, {
       signal: controller.signal,
       headers: { Accept: 'application/json' },
     });
     if (!response.ok) {
-      throw new Error(`Servidor respondeu com erro ${response.status}.`);
+      throw new Error(`Servidor respondeu com erro ${response.status} (${url}).`);
     }
     const data: unknown = await response.json();
     if (!isSnapshot(data)) {

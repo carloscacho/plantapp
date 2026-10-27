@@ -22,7 +22,6 @@ export default function RootLayout() {
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="plant/[id]" options={{headerShown: false, title: 'Ficha da Planta', headerStyle: { backgroundColor: '#32A041' }, headerTintColor: '#fff' }} />
           <Stack.Screen name="admin/index" options={{ title: 'Painel Administrativo', headerStyle: { backgroundColor: '#32A041' }, headerTintColor: '#fff' }} />
-          <Stack.Screen name="+not-found" options={{ title: 'Não Encontrado' }} />
         </Stack>
         </SyncProvider>
       </SQLiteProvider>
