@@ -127,7 +127,7 @@ export async function exportPlantPdf(bundle: PlantDetailBundle, theme: PlantThem
         ` : ''}
 
         <div class="footer">
-          <p>Ficha Botânica gerada pelo aplicativo <strong>Ka'avoHeka</strong></p>
+          <p>Ficha Botânica gerada pelo aplicativo <strong>BuscaKa'avo</strong></p>
           <p>Instituto Federal de Mato Grosso do Sul — Campus Ponta Porã</p>
         </div>
       </body>

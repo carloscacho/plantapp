@@ -18,7 +18,7 @@ export default function ScannerScreen() {
     return (
       <View style={styles.container}>
         <Appbar.Header style={{ backgroundColor: '#32A041' }}>
-          <Appbar.Content title="Ka'avoHeka - Leitor QR" titleStyle={{ color: '#fff', fontWeight: 'bold' }} />
+          <Appbar.Content title="BuscaKa'avo - Leitor QR" titleStyle={{ color: '#fff', fontWeight: 'bold' }} />
         </Appbar.Header>
         <View style={styles.content}>
           <Text style={{ textAlign: 'center', marginBottom: 20 }}>Precisamos da permissão da câmera para escanear a etiqueta da planta.</Text>
@@ -51,7 +51,7 @@ export default function ScannerScreen() {
   return (
     <View style={styles.container}>
       <Appbar.Header style={{ backgroundColor: '#32A041' }}>
-        <Appbar.Content title="Ka'avoHeka - Leitor QR" titleStyle={{ color: '#fff', fontWeight: 'bold' }} />
+        <Appbar.Content title="BuscaKa'avo - Leitor QR" titleStyle={{ color: '#fff', fontWeight: 'bold' }} />
       </Appbar.Header>
       
       {isScanning ? (
